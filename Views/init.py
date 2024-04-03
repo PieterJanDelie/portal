@@ -12,11 +12,10 @@ def register_blueprints(app):
 
     from .home import home_view
     from .kalender import kalender_view
-    from .wedstrijden import wedstrijden_view
+    from .stand import stand_view
     from .uitslagen import uitslagen_view
     from .team import team_view
     from .quiz import quiz_view
-    from .randanimatie import randanimatie_view
     from .feedback import feedback_view
 
     app.register_blueprint(home)
@@ -30,9 +29,8 @@ def register_blueprints(app):
 
     app.add_url_rule("/", view_func=home_view)
     app.add_url_rule("/Kalender", view_func=kalender_view)
-    app.add_url_rule("/Wedstrijden", view_func=wedstrijden_view)
+    app.add_url_rule("/Stand", view_func=stand_view)
     app.add_url_rule("/Uitslagen", view_func=uitslagen_view)
     app.add_url_rule("/Team", view_func=team_view)
     app.add_url_rule("/Quiz", view_func=quiz_view)
-    app.add_url_rule("/Randanimatie", view_func=randanimatie_view)
     app.add_url_rule("/Feedback", view_func=feedback_view)

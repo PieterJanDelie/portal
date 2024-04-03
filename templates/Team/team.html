@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team</title>
+    <style>
+      {{ title_wrap_style|safe }}
+
+/* Stijlen voor de kolommen */
+.gdlr-core-column-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gdlr-core-column-15 {
+    width: calc(20% - 20px); /* 20% breedte, met ruimte tussen de kolommen */
+    margin-right: 20px; /* Ruimte tussen de kolommen */
+    margin-bottom: 20px; /* Ruimte onder de rijen */
+    box-sizing: border-box; /* Om marges binnen de breedte te houden */
+}
+
+/* Media query voor responsieve layout */
+@media screen and (max-width: 768px) {
+    .gdlr-core-column-15 {
+        width: calc(50% - 20px); /* 50% breedte op schermen kleiner dan 768px */
+    }
+}
+        .navigation {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="navigation">
+        <a href="/"><img src="static/house.png" alt="Back to Home" width="30"></a>
+    </div>
+    {{ title_wrap|safe }} {{ page_wrapper|safe }}
+  </body>
+</html>

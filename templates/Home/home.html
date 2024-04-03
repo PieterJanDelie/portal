@@ -14,16 +14,19 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-image: url('static/yellowbackground.jpg');
         }
 
         .container {
             width: 95%;
             max-width: 800px;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
+            border-radius: 75px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-color: #f4f4f4;
         }
 
         h1 {
@@ -37,7 +40,6 @@
         }
 
         button {
-            background-color: #ffd500;
             border: none;
             color: #333;
             padding: 15px 30px;
@@ -47,36 +49,26 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             font-size: 20px;
+            background-image: url('static/yellowbackground.jpg');
         }
 
         button:hover {
             background-color: #e5c100;
             transition: background-color 0.3s ease;
         }
-
-        .intro-text {
-            margin-bottom: 30px;
-            font-size: 20px;
-        }
-
-        p {
-            color: #666;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Home</h1>
+        <h1>Welkom bij BCO</h1>
+        <h2>Wat wilt u doen</h2>
         <div class="button-container">
             <a href="/Kalender"><button>Kalender</button></a>
-            <a href="/Wedstrijden"><button>Wedstrijden</button></a>
+            <a href="/Stand"><button>Stand</button></a>
             <a href="/Uitslagen"><button>Uitslagen</button></a>
             <a href="/Team"><button>Team</button></a>
             <a href="/Quiz"><button>Quiz</button></a>
-        </div>
-        <div class="intro-text">
-            <h2>Welcome to our website!</h2>
-            <p>Here you can find information about our team, upcoming events, and results. You can also test your knowledge with our quiz!</p>
+            <a href="/Feedback"><button>Feedback</button></a>
         </div>
     </div>
 </body>

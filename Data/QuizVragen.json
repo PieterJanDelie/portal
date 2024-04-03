@@ -1,0 +1,55 @@
+{
+    "vragen": [
+      {
+        "vraag": "In welk jaar werd basketbalclub Oostende opgericht?",
+        "mogelijke_antwoorden": ["1970", "1972", "1975", "1980"],
+        "juist_antwoord": "1970"
+      },
+      {
+        "vraag": "Hoeveel keer heeft basketbalclub Oostende de Belgische basketbalcompetitie gewonnen?",
+        "mogelijke_antwoorden": ["12", "15", "18", "20"],
+        "juist_antwoord": "20"
+      },
+      {
+        "vraag": "Wie is de huidige coach van basketbalclub Oostende?",
+        "mogelijke_antwoorden": ["Jean-Marc Jaumin", "Gertjan Van den Berghe", "Dario Gjergja", "Vital Heynen"],
+        "juist_antwoord": "Dario Gjergja"
+      },
+      {
+        "vraag": "Hoeveel keer heeft basketbalclub Oostende de EuroMillions Basketball League gewonnen?",
+        "mogelijke_antwoorden": ["8", "10", "12", "14"],
+        "juist_antwoord": "10"
+      },
+      {
+        "vraag": "Wat is de bijnaam van basketbalclub Oostende?",
+        "mogelijke_antwoorden": ["De Zeekapiteins", "De Piraten", "De Kustboys", "De Zeeleeuwen"],
+        "juist_antwoord": "De Zeekapiteins"
+      },
+      {
+        "vraag": "Welke speler heeft het record voor de meeste punten gescoord in één seizoen voor basketbalclub Oostende?",
+        "mogelijke_antwoorden": ["Dusan Djordjevic", "Jean-Marc Mwema", "Corey Walden", "Djordjevic Ostende"],
+        "juist_antwoord": "Dusan Djordjevic"
+      },
+      {
+        "vraag": "Welke kleuren vertegenwoordigen basketbalclub Oostende?",
+        "mogelijke_antwoorden": ["Rood en Wit", "Blauw en Geel", "Groen en Zwart", "Zwart en Oranje"],
+        "juist_antwoord": "Blauw en Geel"
+      },
+      {
+        "vraag": "Hoe heet het stadion waar basketbalclub Oostende zijn thuiswedstrijden speelt?",
+        "mogelijke_antwoorden": ["Versluys Dome", "Marathonhal", "De Spuikom", "De Schorre"],
+        "juist_antwoord": "Versluys Dome"
+      },
+      {
+        "vraag": "Welke voormalige NBA-speler heeft gespeeld voor basketbalclub Oostende?",
+        "mogelijke_antwoorden": ["Michael Jordan", "Shaquille O'Neal", "Dirk Nowitzki", "Tony Parker"],
+        "juist_antwoord": "Dirk Nowitzki"
+      },
+      {
+        "vraag": "Wie is de huidige topscorer aller tijden van basketbalclub Oostende?",
+        "mogelijke_antwoorden": ["Jean-Marc Mwema", "Jean Salumu", "Dusan Djordjevic", "Corey Walden"],
+        "juist_antwoord": "Jean Salumu"
+      }
+    ]
+  }
+  

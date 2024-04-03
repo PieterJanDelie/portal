@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender</title>
+    <style>
+        .navigation {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navigation">
+        <a href="/"><img src="static/house.png" alt="Back to Home" width="30"></a>
+    </div>
+    <div class="sp-template sp-template-event-list">
+        {{ event_list|safe }}
+    </div>
+</body>
+</html>
