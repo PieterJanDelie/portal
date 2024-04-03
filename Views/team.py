@@ -17,7 +17,7 @@ def team():
 
         if title_wrap and page_wrapper:
             for a_tag in page_wrapper.find_all('a'):
-                a_tag.decompose()
+                a_tag.unwrap()
 
             title_wrap_style = title_wrap.get("style")
 
