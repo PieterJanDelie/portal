@@ -4,7 +4,7 @@
         "vraag": "Wat is de gemiddelde lengte van onze spelers?",
         "mogelijke_antwoorden": ["196cm","199cm", "202cm", "205cm"],
         "juist_antwoord": "199cm",
-        "laatste_tekstje": "Sam van Rossom is onze kleine jongen met een lengte van 188cm, \nXander Pintelon en Haris Bratanovic zijn onze big boys met elk 208cm."
+        "laatste_tekstje": "Sam van Rossom is onze kleine jongen met een lengte van 188cm, Xander Pintelon en Haris Bratanovic zijn onze big boys met elk 208cm."
       },
       {
         "vraag": "Aantal punten scoorde BCO al dit seizoen in alle competities?",
@@ -28,10 +28,10 @@
         "vraag": "Hoeveel volgers heeft BCO op Facebook, X en LinkedIn tesamen?",
         "mogelijke_antwoorden": ["+/- 15000"," +/- 19000", "+/- 21000", "+/- 25000"],
         "juist_antwoord": "+/- 21000",
-        "laatste_tekstje": "Ons grootste aantal volgt ons momenteel op Facebook.\n Volg jij ons al op al deze kanalen?"
+        "laatste_tekstje": "Ons grootste aantal volgt ons momenteel op Facebook. Volg jij ons al op al deze kanalen?"
       },
       {
-        "vraag": "Hoeveel keer is het BCO-logo zichtbaar in de Foyer?\n (Affiches, Folders, Flyers en het logo van Filou niet meegerekend)",
+        "vraag": "Hoeveel keer is het BCO-logo zichtbaar in de Foyer? (Affiches, Folders, Flyers en het logo van Filou niet meegerekend)",
         "mogelijke_antwoorden": ["75 keer","85 keer", "95 keer", "105 keer"],
         "juist_antwoord": "85 keer",
         "laatste_tekstje": "Dit klopt hoor. Tel dit maar eens na!"
@@ -64,19 +64,19 @@
         "vraag": "Hoeveel zeges hadden we in het corona jaar 2020?",
         "mogelijke_antwoorden": ["Geen niet gespeeld door corona","3 matchen", "13 matchen", "23 matchen"],
         "juist_antwoord": "13 matchen",
-        "laatste_tekstje": "Toen hadden we slechts 13 matchen nodig voor onze titel te verkrijgen.\n Nu gaan we voor onze 13de titel op een rij"
+        "laatste_tekstje": "Toen hadden we slechts 13 matchen nodig voor onze titel te verkrijgen. Nu gaan we voor onze 13de titel op een rij"
       },
       {
         "vraag": "Welk seizoen hadden we voor het laatst geen landstitel?",
-        "mogelijke_antwoorden": ["2004/05","2007/08", "2010/11", "2019/20"],
-        "juist_antwoord": "2004/05",
+        "mogelijke_antwoorden": ["2007/08", "2010/11","2014/15", "2019/20"],
+        "juist_antwoord": "2010/11",
         "laatste_tekstje": "WOW! al 12 jaren op rij de titel. Op naar nummer 13\n#UNSEEN13"
       },
       {
         "vraag": "Hoeveel titels haalde de legende Djordjevic bij BCO?",
         "mogelijke_antwoorden": ["8 titels","10 titels", "12 titels", "14 titels"],
         "juist_antwoord": "12 titels",
-        "laatste_tekstje": "Djordjevic werd met BCO maar liefst 12 keer achter elkaar kampioen. \nVorige zomer ging hij met pijn in het hart op pensioen."
+        "laatste_tekstje": "Djordjevic werd met BCO maar liefst 12 keer achter elkaar kampioen. Vorige zomer ging hij met pijn in het hart op pensioen."
       },
       {
         "vraag": "Hoeveel keer kon BCO de dubbel (beker en titel) al behalen?",
@@ -85,7 +85,7 @@
         "laatste_tekstje": "Dit lukte al maar liefst 12 keer. Dit seizoen kan er geen 13de keer bijkomen."
       },
       {
-        "vraag": "Hoeveel assists had Djordjevic in zijn BCO-carrière? (Geen préseason)",
+        "vraag": "Hoeveel assists had Djordjevic in zijn BCO-carriere? (Geen préseason)",
         "mogelijke_antwoorden": ["2734 assists","2834 assists", "2910 assists", "3102 assists"],
         "juist_antwoord": "2834 assists",
         "laatste_tekstje": "WAW! WAW! WAW! Hiermee doet hij beter dan LeBron James bij de LA Lakers. Hij komt maar aan 2756 assists."

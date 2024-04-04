@@ -41,11 +41,9 @@ def start_quiz():
             session.pop('asked_questions', None)
             if eindscore >= 3:
                 background_source=getRandomImage("eindscore/goed")
-                eindtekst = "Nu ben je officieel lid van de Yellow-Wall"
             else:
                 background_source=getRandomImage("eindscore/slecht")
-                eindtekst = "Blijf het proberen!"
-            return render_template("Quiz/quiz_end.html", eindscore=eindscore, background_source=background_source, eindtekst=eindtekst)
+            return render_template("Quiz/quiz_end.html", eindscore=eindscore, background_source=background_source)
         else:
             vraag_data = get_random_question(session.get('asked_questions', []))
             vraag = vraag_data['vraag']
