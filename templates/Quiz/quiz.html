@@ -7,6 +7,12 @@
       body {
         margin: 0;
         padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffd500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
       .home-container {
         display: flex;
@@ -17,10 +23,11 @@
       }
 
       .tile {
+        position: relative;
         background-color: #ffffff;
         padding: 40px;
         border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
         text-align: center;
       }
 
@@ -48,6 +55,18 @@
       .beginText {
         font-size: 2em;
       }
+      .AllseeLogo {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 10%;
+      }
+      .provided-text {
+        position: absolute;
+        bottom: 30px;
+        right: calc(10px + 10%);
+        font-size: 120%;
+      }
     </style>
   </head>
   <body>
@@ -63,6 +82,12 @@
           ><button class="start-quiz-button">Start Quiz</button></a
         >
       </div>
+      <div class="provided-text">provided by</div>
+      <img
+        src="static/allsee-logo.png"
+        alt="Allsee logo"
+        class="AllseeLogo"
+      />
     </div>
   </body>
 </html>
