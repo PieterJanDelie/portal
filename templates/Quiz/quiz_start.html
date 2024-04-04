@@ -46,7 +46,7 @@
       input[type="submit"]:hover {
         background-color: #e5c100;
       }
-      .logo {
+      .backgroundimage {
         position: fixed;
         top: 0;
         left: 0;
@@ -57,20 +57,20 @@
       }
       .AllseeLogo {
         position: absolute;
-        bottom: 10px;
-        right: 10px;
+        bottom: 2%;
         width: 10%;
+        right: 0%;
       }
       .provided-text {
         position: absolute;
-        bottom: 30px;
+        bottom: 2%;
         right: calc(10px + 10%);
         font-size: 120%;
       }
     </style>
   </head>
   <body>
-    <img src="../static/vraag1.jpg" alt="vraag" class="logo" />
+    <img src={{background_source}} alt="background" class="backgroundimage" />
     <div class="container">
       <h1>Quiz</h1>
       <form method="post">
