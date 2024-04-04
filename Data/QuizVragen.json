@@ -79,10 +79,16 @@
         "laatste_tekstje": "Djordjevic werd met BCO maar liefst 12 keer achter elkaar kampioen. \nVorige zomer ging hij met pijn in het hart op pensioen."
       },
       {
-        "vraag": "Hoeveel keer kon BCO de dubbel al behalen?",
+        "vraag": "Hoeveel keer kon BCO de dubbel (beker en titel) al behalen?",
         "mogelijke_antwoorden": ["5 keer","7 keer", "9 keer", "12 keer"],
         "juist_antwoord": "12 keer",
         "laatste_tekstje": "Dit lukte al maar liefst 12 keer. Dit seizoen kan er geen 13de keer bijkomen."
+      },
+      {
+        "vraag": "Hoeveel assists had Djordjevic in zijn BCO-carrière? (Geen préseason)",
+        "mogelijke_antwoorden": ["2734 assists","2834 assists", "2910 assists", "3102 assists"],
+        "juist_antwoord": "2834 assists",
+        "laatste_tekstje": "WAW! WAW! WAW! Hiermee doet hij beter dan LeBron James bij de LA Lakers. Hij komt maar aan 2756 assists."
       }
     ]
   }
