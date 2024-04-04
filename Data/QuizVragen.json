@@ -37,13 +37,13 @@
         "laatste_tekstje": "Dit klopt hoor. Tel dit maar eens na!"
       },
       {
-        "vraag": "Wat is de gemiddelde leeftijd van onze u21 ploeg?",
+        "vraag": "Wat is de gemiddelde leeftijd van onze U21 ploeg?",
         "mogelijke_antwoorden": ["17 jaar","18 jaar", "19 jaar", "20 jaar"],
         "juist_antwoord": "17 jaar",
         "laatste_tekstje": "De gemiddelde leeftijd is slechts 17 jaar. Er zit nog zoveel talent aan te komen."
       },
       {
-        "vraag": "Wat is de gemiddelde lengte van onze u21 ploeg?",
+        "vraag": "Wat is de gemiddelde lengte van onze U21 ploeg?",
         "mogelijke_antwoorden": ["188cm","192cm", "196cm", "200cm"],
         "juist_antwoord": "200cm",
         "laatste_tekstje": "Noem deze dus zeker niet de kleintjes maar eerder de jongere."
