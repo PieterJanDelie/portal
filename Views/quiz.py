@@ -2,6 +2,7 @@ import json
 import random
 from flask import Blueprint, render_template, request, session
 import os
+import os
 
 quiz_view = Blueprint('quiz', __name__, template_folder='templates')
 
