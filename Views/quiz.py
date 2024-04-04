@@ -11,7 +11,7 @@ def get_random_question():
     
 @quiz_view.route("/")
 def quiz_home():
-    session['questions_answered'] = 0  # Reset het aantal beantwoorde vragen
+    session['questions_answered'] = 0
     return render_template("Quiz/quiz.html")
 
 @quiz_view.route("/StartQuiz", methods=['GET', 'POST'])
@@ -34,6 +34,6 @@ def start_quiz():
         vraag_data = session.get('current_quiz_question')
         juist_antwoord = vraag_data['juist_antwoord']
         if answer == juist_antwoord:
-            return render_template("Quiz/quiz_correct.html")
+            return render_template("Quiz/quiz_correct.html", laatste_tekstje = vraag_data["laatste_tekstje"])
         else:
-            return render_template("Quiz/quiz_incorrect.html")
+            return render_template("Quiz/quiz_incorrect.html", laatste_tekstje = vraag_data["laatste_tekstje"])
