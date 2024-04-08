@@ -8,7 +8,7 @@ from datetime import datetime
 quiz_view = Blueprint('quiz', __name__, template_folder='templates')
 
 def get_random_question(asked_questions):
-    with open('Data/QuizVragen.json', 'r') as f:
+    with open('Data/' + os.getenv('DATA_FILE'), 'r') as f:
         vragen = json.load(f)['vragen']
         beschikbare_vragen = [vraag for vraag in vragen if vraag['vraag'] not in asked_questions]
         return random.choice(beschikbare_vragen)
@@ -40,7 +40,7 @@ def quiz_home():
     session['questions_answered'] = 0
     session['correct_answers'] = 0
     session['asked_questions'] = []
-    spelers_images = get_images("Spelers")
+    spelers_images = get_images("spelers")
     return render_template("Quiz/quiz.html", background_source=getRandomImage("startscherm", InParentFolder=False), spelers_images=spelers_images)
 
 @quiz_view.route("/StartQuiz", methods=['GET', 'POST'])

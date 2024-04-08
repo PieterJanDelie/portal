@@ -8,8 +8,13 @@ from Views.quiz import start_quiz
 from Views.quiz import quiz_home
 from Views.feedback import feedback
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 app = Flask(__name__)
-app.secret_key = 'BAD_SECRET_KEY'
+app.secret_key = os.getenv('SECRET_KEY')
 
 app.add_url_rule("/", view_func=home)
 app.add_url_rule("/Kalender", view_func=kalender)
@@ -22,4 +27,4 @@ app.add_url_rule("/Feedback", view_func=feedback, methods=['GET', 'POST'])
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=os.getenv('PORT'))
