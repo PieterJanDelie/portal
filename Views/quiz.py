@@ -61,15 +61,19 @@ def start_quiz():
             vraag_data = get_random_question(session.get('asked_questions', []))
             vraag = vraag_data['vraag']
             session['asked_questions'].append(vraag)
+            print("Vraag: ", vraag)
             mogelijke_antwoorden = vraag_data['mogelijke_antwoorden']
             session['current_quiz_question'] = vraag_data
-            return render_template("Quiz/quiz_start.html", vraag=vraag, mogelijke_antwoorden=mogelijke_antwoorden, background_source=getRandomImage("spelers"))
+            return render_template("Quiz/quiz_start.html", vraag=vraag, mogelijke_antwoorden=mogelijke_antwoorden, background_source=getRandomImage("spelers"), VraagNummer= session.get('questions_answered', 0) + 1)
     elif request.method == 'POST':
         session['questions_answered'] += 1
         vraag_data = session.get('current_quiz_question')
         juist_antwoord = vraag_data['juist_antwoord']
+        vraag = vraag_data['vraag']
         answer = request.form['answer']
-        write_to_csv("Antwoorden.csv", [datetime.now(), vraag_data['vraag'], answer])
+        write_to_csv("Antwoorden.csv", [datetime.now(), vraag, answer])
+        print("Vraag: ", vraag)
+        print("Antwoord: ", answer ,"juist= ",answer == juist_antwoord)
         if answer == juist_antwoord:
             session['correct_answers'] = session.get('correct_answers', 0) + 1
 

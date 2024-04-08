@@ -17,7 +17,7 @@
     }
     .container {
       position: relative;
-      max-width: 600px;
+      max-width: 50%;
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
@@ -34,16 +34,20 @@
       margin-right: 10px;
     }
     input[type="submit"] {
-      background-color: #dd8e07;
-      color: #fff;
-      border: none;
-      padding: 20px 40px; /* Vergroot de padding voor een groter drukbaar gebied */
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin: 20px 0px 5px 0px;
-      border-radius: 10px;
-      font-size: x-large;
+        background-color: #dd8e07;
+        color: #fff;
+        border: none;
+        padding: 20px 40px; 
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 10px 20px;
+        margin: 20px 0px 5px 0px;
+        border-radius: 10px;
+        font-size: xx-large;
     }
     input[type="submit"]:hover {
       background-color: #ffd500;
@@ -78,6 +82,11 @@
     .BackHome img {
       width: 50px;
     }
+    .answerstyle{
+      transform: scale(2); 
+      margin: 20px;
+      font-size: xx-large;
+    }
   </style>
 </head>
 <body>
@@ -86,7 +95,7 @@
     <a href="/Quiz" class="BackHome"
       ><img src="../static/house.png" alt="Back to home"
     /></a>
-    <h1>Quiz</h1>
+    <h1>Vraag {{VraagNummer}}/5</h1>
     <form method="post">
       <p>{{ vraag }}</p>
       {% for antwoord in mogelijke_antwoorden %}
@@ -96,11 +105,11 @@
         name="answer"
         value="{{ antwoord }}"
         required
-        style="transform: scale(2); margin: 10px;"
+        class="answerstyle"
       />
-      <label for="{{ antwoord }}" style="font-size: x-large;">{{ antwoord }}</label><br />
+      <label for="{{ antwoord }}" class="answerstyle">{{ antwoord }}</label><br />
       {% endfor %}
-      <input type="submit" value="Verstuur antwoord" style="padding: 20px 40px; font-size: x-large;" />
+      <input type="submit" value="Volgende" />
     </form>
   </div>
   <div class="provided-text">provided by</div>

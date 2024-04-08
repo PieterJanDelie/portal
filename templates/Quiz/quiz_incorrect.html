@@ -18,7 +18,8 @@
       .container {
         position: relative;
         background-color: #ffffff;
-        padding: 40px;
+        max-width: 50%;
+        padding: 20px;
         border-radius: 20px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
         text-align: center;
@@ -35,7 +36,7 @@
         background-color: #dd8e07;
         color: #fff;
         border: none;
-        padding: 10px 20px;
+        padding: 20px 40px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -88,12 +89,12 @@
       <a href="/Quiz" class="BackHome"
         ><img src="../static/house.png" alt="Back to home"
       /></a>
-      <h1>Foutief antwoord!</h1>
+      <h1>Fout!</h1>
       <p>Spijtig, jouw antwoord {{geantwoord}} was verkeerd.</p>
       <p>Het correcte antwoord was {{antwoord}}.</p>
       <p>{{laatste_tekstje}}</p>
       <a href="/Quiz/StartQuiz"
-        ><button class="new-question-btn">Nieuwe vraag</button></a
+        ><button class="new-question-btn">Volgende</button></a
       >
     </div>
     <div class="provided-text">provided by</div>
