@@ -7,6 +7,7 @@ from Views.team import team
 from Views.quiz import start_quiz
 from Views.quiz import quiz_home
 from Views.feedback import feedback
+from Views.memory import memory_home, memory_game, memory_end
 
 from dotenv import load_dotenv
 import os
@@ -24,6 +25,10 @@ app.add_url_rule("/Team", view_func=team)
 app.add_url_rule("/Quiz", view_func=quiz_home)
 app.add_url_rule("/Quiz/StartQuiz", view_func=start_quiz, methods=['GET', 'POST'])
 app.add_url_rule("/Feedback", view_func=feedback, methods=['GET', 'POST'])
+app.add_url_rule("/Memory", view_func=memory_home)
+app.add_url_rule("/Memory/Play", view_func=memory_game)
+app.add_url_rule("/Memory/Einde", view_func=memory_end)
+
 
 @app.errorhandler(Exception)
 def handle_exception(e):

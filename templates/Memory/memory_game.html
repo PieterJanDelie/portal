@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .game-container {
+        position: relative;
+        width: 800px;
+        padding: 20px;
+        border-radius: 10px;
+        row-gap: 15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background-image: linear-gradient(90deg, #fffbd5, #ccc);
+      }
+
+      .cards-container {
+        display: grid;
+        grid-template-rows: 125px 125px 125px;
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-gap: 20px 10px;
+        place-items: center;
+      }
+
+      .heading-container {
+        text-align: center;
+      }
+
+      .gfg-heading {
+        color: #dd8e07;
+      }
+
+      .card {
+        justify-items: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .outline-image {
+        position: absolute;
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+        height: 125px;
+        width: 125px;
+        border-radius: 50%;
+      }
+
+      .card-image {
+        height: 125px;
+        width: 125px;
+        transform: rotateY(90deg);
+        transition: all ease-in 0.25s;
+        mix-blend-mode: multiply;
+      }
+
+      .progress-container {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 50px 0 20px 0;
+      }
+
+      .move-counter {
+        padding: 10px 20px;
+        border-radius: 25px;
+        border: 1px solid #ccc;
+      }
+
+      .toggled .card-image {
+        transform: rotateY(0deg);
+        transition-delay: 0.25s;
+      }
+
+      .item .outline-image {
+        transition: all ease-in 0.25s;
+        transition-delay: 0.25s;
+      }
+
+      .toggled .outline-image {
+        transform: rotateY(90deg);
+        transition-delay: 0s;
+      }
+
+      .backgroundimage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .AllseeLogo {
+        position: absolute;
+        bottom: 2%;
+        right: 0%;
+        width: 10%;
+      }
+      .provided-text {
+        position: absolute;
+        bottom: 2%;
+        right: calc(10px + 10%);
+        font-size: 120%;
+      }
+
+      .timer {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        color: #333;
+      }
+
+      @media screen and (max-width: 767px) {
+        .game-container {
+          width: 100%;
+        }
+
+        .cards-container {
+          grid-template-rows: 125px 125px 125px 125px;
+          grid-template-columns: 33% 33% 33%;
+          grid-gap: 10px 10px;
+        }
+
+        .outline-image {
+          height: 100px;
+          width: 100px;
+        }
+
+        .card-image {
+          height: 100px;
+          width: 100px;
+        }
+
+        .progress-container {
+          margin: 10px 0 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="{{background_source}}" alt="background" class="backgroundimage" />
+    <div class="container">
+      <div class="game-container">
+        <div class="heading-container">
+          <h1 class="gfg-heading">Memory Game</h1>
+          <div id="timer" class="timer">Tijd: 00:00</div>
+        </div>
+        <div class="cards-container">
+          {% for card_image in card_images %}
+          <div class="card item">
+            <img
+              class="outline-image"
+              src="{{ url_for('static', filename='logo/BCO-Filou-logo-voor-witte-achtergrond.png') }}"
+              alt="Card outline"
+            />
+            <img
+              class="card-image"
+              src="{{ url_for('static', filename=card_image) }}"
+              alt="{{ card_image.split('/')[-1].split('.')[0] }}"
+            />
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="provided-text">provided by</div>
+    <img
+      src="../static/logo/allsee-logo.png"
+      alt="Allsee logo"
+      class="AllseeLogo"
+    />
+    <script>
+      const cards = document.getElementsByClassName("card");
+      let toggledCardsArray = [];
+      let move = 0;
+      let winCount = 0;
+      let startTime = Date.now();
+
+      function displayTime() {
+          let currentTime = Date.now();
+          let elapsedTime = Math.floor((currentTime - startTime) / 1000);
+          let minutes = Math.floor(elapsedTime / 60);
+          let seconds = elapsedTime % 60;
+          document.getElementById('timer').textContent = `Tijd: ${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      }
+
+      setInterval(displayTime, 1000);
+
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("click", function () {
+          this.classList.add("toggled");
+          toggledCardsArray.push(this);
+          let thisImgSrc = this.querySelector(".card-image").src;
+          let previousImgSrc =
+            toggledCardsArray[toggledCardsArray.length - 2].querySelector(
+              ".card-image"
+            ).src;
+          if (thisImgSrc !== previousImgSrc) {
+            toggledCardsArray.forEach(function (el) {
+              setTimeout(() => {
+                el.classList.remove("toggled");
+              }, 1000);
+            });
+            toggledCardsArray.length = 0;
+            move++;
+          } else {
+            toggledCardsArray.length = 0;
+            move++;
+            winCount++;
+          }
+          const totalPairs = {{ card_images | length // 2 }};
+
+          if (winCount === totalPairs) {
+            let endTime = Date.now();
+            let gameTimeInSeconds = Math.floor((endTime - startTime) / 1000);
+            window.location.href = `/Memory/Einde?moves=${move}&time=${gameTimeInSeconds}`;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -54,9 +54,8 @@ def quiz_home():
     session['questions_answered'] = 0
     session['correct_answers'] = 0
     session['asked_questions'] = []
-    spelers_images = get_images("spelers")
     image_paths = get_image_paths()
-    return render_template("Quiz/quiz.html", background_source=getRandomImage("startscherm", InParentFolder=False), spelers_images=spelers_images,imagesources=image_paths)
+    return render_template("Quiz/quiz.html", background_source=getRandomImage("quiz/startscherm", InParentFolder=False),imagesources=image_paths)
 
 @quiz_view.route("/StartQuiz", methods=['GET', 'POST'])
 def start_quiz():
@@ -67,10 +66,10 @@ def start_quiz():
             session.pop('correct_answers', None)
             session.pop('asked_questions', None)
             if eindscore >= 1:
-                background_source=getRandomImage("eindscore/goed")
+                background_source=getRandomImage("quiz/eindscore/goed")
             else:
-                background_source=getRandomImage("eindscore/slecht")
-            write_to_csv("Eindscores.csv", [datetime.now(), eindscore])
+                background_source=getRandomImage("quiz/eindscore/slecht")
+            write_to_csv("Quiz/Eindscores.csv", [datetime.now(), eindscore])
             return render_template("Quiz/quiz_end.html", eindscore=eindscore, background_source=background_source)
         else:
             vraag_data = get_random_question(session.get('asked_questions', []))
@@ -79,20 +78,20 @@ def start_quiz():
             print("Vraag: ", vraag)
             mogelijke_antwoorden = vraag_data['mogelijke_antwoorden']
             session['current_quiz_question'] = vraag_data
-            return render_template("Quiz/quiz_start.html", vraag=vraag, mogelijke_antwoorden=mogelijke_antwoorden, background_source=getRandomImage("spelers"), VraagNummer= session.get('questions_answered', 0) + 1)
+            return render_template("Quiz/quiz_start.html", vraag=vraag, mogelijke_antwoorden=mogelijke_antwoorden, background_source=getRandomImage("quiz/spelers"), VraagNummer= session.get('questions_answered', 0) + 1)
     elif request.method == 'POST':
         session['questions_answered'] += 1
         vraag_data = session.get('current_quiz_question')
         juist_antwoord = vraag_data['juist_antwoord']
         vraag = vraag_data['vraag']
         answer = request.form['answer']
-        write_to_csv("Antwoorden.csv", [datetime.now(), vraag, answer])
+        write_to_csv("Quiz/Antwoorden.csv", [datetime.now(), vraag, answer])
         print("Vraag: ", vraag)
         print("Antwoord: ", answer ,"juist = ",answer == juist_antwoord)
         if answer == juist_antwoord:
             session['correct_answers'] = session.get('correct_answers', 0) + 1
 
         if answer == juist_antwoord:
-            return render_template("Quiz/quiz_correct.html", antwoord=juist_antwoord, laatste_tekstje=vraag_data["laatste_tekstje"], background_source=getRandomImage("antwoorden/juist"))
+            return render_template("Quiz/quiz_correct.html", antwoord=juist_antwoord, laatste_tekstje=vraag_data["laatste_tekstje"], background_source=getRandomImage("quiz/antwoorden/juist"))
         else:
-            return render_template("Quiz/quiz_incorrect.html", antwoord=juist_antwoord, geantwoord=answer, laatste_tekstje=vraag_data["laatste_tekstje"], background_source=getRandomImage("antwoorden/fout"))
+            return render_template("Quiz/quiz_incorrect.html", antwoord=juist_antwoord, geantwoord=answer, laatste_tekstje=vraag_data["laatste_tekstje"], background_source=getRandomImage("quiz/antwoorden/fout"))
