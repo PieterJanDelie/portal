@@ -1,0 +1,185 @@
+{
+  "vragen": [
+    {
+      "vraag": "Wat is de gemiddelde lengte van onze spelers?",
+      "mogelijke_antwoorden": ["196cm","199cm", "202cm", "205cm"],
+      "juist_antwoord": "199cm",
+      "laatste_tekstje": "Sam van Rossom is onze kleinste speler met een lengte van 188cm, Xander Pintelon en Haris Bratanovic zijn onze big boys met elk 208cm."
+    },
+    {
+      "vraag": "Hoeveel punten scoorde BCO al dit seizoen in alle competities?",
+      "mogelijke_antwoorden": ["2531 punten","2654 punten", "2726 punten", "2831 punten"],
+      "juist_antwoord": "2831 punten",
+      "laatste_tekstje": "In totaal scoorden we al 2831 punten of 76 per match."
+    },
+    {
+      "vraag": "Wie heeft de meeste assists dit seizoen in de BNXT?",
+      "mogelijke_antwoorden": ["Sam Van Rossom","Jean Salumu", "Damien Jefferson", "Khalil Ahmad"],
+      "juist_antwoord": "Sam Van Rossom",
+      "laatste_tekstje": "Sam deelt meer dan 4 assists uit gemiddeld per wedstrijd."
+    },
+    {
+      "vraag": "Hoeveel prijzen heeft BC Oostende in totaal?",
+      "mogelijke_antwoorden": ["55 prijzen","57 prijzen", "59 prijzen", "61 prijzen"],
+      "juist_antwoord": "59 prijzen",
+      "laatste_tekstje": "WOW! Al 59 prijzen. Dit jaar gaan we vol voor onze 60ste prijs.\n#UNSEENTHIRTEEN"
+    },
+    {
+      "vraag": "Hoeveel volgers heeft BCO op Facebook, X en LinkedIn tesamen?",
+      "mogelijke_antwoorden": ["+/- 15000"," +/- 19000", "+/- 21000", "+/- 25000"],
+      "juist_antwoord": "+/- 21000",
+      "laatste_tekstje": "We hebben het grootste aantal volgers of Facebook. Volg jij ons al op al deze kanalen?"
+    },
+    {
+      "vraag": "Hoeveel keer is het BCO-logo zichtbaar in de Foyer? (Affiches, Folders, Flyers en het logo van Filou niet meegerekend)",
+      "mogelijke_antwoorden": ["75 keer","85 keer", "95 keer", "105 keer"],
+      "juist_antwoord": "85 keer",
+      "laatste_tekstje": "Dit klopt hoor. Tel dit maar eens na!"
+    },
+    {
+      "vraag": "Wat is de gemiddelde leeftijd van onze U21 ploeg?",
+      "mogelijke_antwoorden": ["17 jaar","18 jaar", "19 jaar", "20 jaar"],
+      "juist_antwoord": "17 jaar",
+      "laatste_tekstje": "De gemiddelde leeftijd is slechts 17 jaar. Er zit nog zoveel talent aan te komen."
+    },
+    {
+      "vraag": "Wat is de gemiddelde lengte van onze U21 ploeg?",
+      "mogelijke_antwoorden": ["188cm","192cm", "196cm", "200cm"],
+      "juist_antwoord": "200cm",
+      "laatste_tekstje": "Noem deze dus zeker niet de kleintjes maar eerder de jongere."
+    },
+    {
+      "vraag": "Onder welke naam hebben we de meeste zoekresultaten op Google?",
+      "mogelijke_antwoorden": ["BC Oostende","Sunair Oostende", "Filou BC Oostende", "Telenet Oostende"],
+      "juist_antwoord": "BC Oostende",
+      "laatste_tekstje": "Met de zoekterm BC Oostende zijn er maar liefst 1.030.000 zoekresultaten!"
+    },
+    {
+      "vraag": "Welke hashtag hebben we nog nooit gebruikt?",
+      "mogelijke_antwoorden": ["#Legendary12","#HeavenELEVEN", "#MagicTWELVE", "#UnseenTHIRTEEN"],
+      "juist_antwoord": "#Legendary12",
+      "laatste_tekstje": "Dit jaar gaan we voor UNSEEN THIRTEEN!!! Komaan BCO"
+    },
+    {
+      "vraag": "Hoeveel zeges hadden we in het coronajaar 2020?",
+      "mogelijke_antwoorden": ["Geen, niet gespeeld door corona","3 matchen", "13 matchen", "23 matchen"],
+      "juist_antwoord": "13 matchen",
+      "laatste_tekstje": "Toen hadden we slechts 13 matchen nodig voor onze titel te claimen. Nu gaan we voor onze 13de titel op een rij."
+    },
+    {
+      "vraag": "In welk seizoen hadden we voor het laatst geen landstitel?",
+      "mogelijke_antwoorden": ["2007/08", "2010/11","2014/15", "2019/20"],
+      "juist_antwoord": "2010/11",
+      "laatste_tekstje": "WOW! al 12 jaren op rij de titel. Op naar nummer 13\n#UNSEENTHIRTEEN"
+    },
+    {
+      "vraag": "Hoeveel titels haalde de legende Djordjevic bij BCO?",
+      "mogelijke_antwoorden": ["8 titels","10 titels", "12 titels", "14 titels"],
+      "juist_antwoord": "12 titels",
+      "laatste_tekstje": "Djordjevic werd met BCO maar liefst 12 keer achter elkaar kampioen. Vorige zomer ging hij met pijn in het hart op pensioen."
+    },
+    {
+      "vraag": "Hoeveel keer kon BCO de dubbel (beker en titel) al behalen?",
+      "mogelijke_antwoorden": ["5 keer","7 keer", "9 keer", "12 keer"],
+      "juist_antwoord": "12 keer",
+      "laatste_tekstje": "Dit lukte al maar liefst 12 keer."
+    },
+    {
+      "vraag": "Hoeveel assists had Djordjevic in zijn BCO-periode? (Geen voorseizoen)",
+      "mogelijke_antwoorden": ["2734 assists","2834 assists", "2910 assists", "3102 assists"],
+      "juist_antwoord": "2834 assists",
+      "laatste_tekstje": "WAW! WAW! WAW! Hiermee doet hij beter dan LeBron James bij de LA Lakers. Hij komt maar aan 2768 assists."
+    },
+    {
+      "vraag": "Welke head coach uit de BNXT-League was voor Dario Gjergja head coach bij Oostende?",
+      "mogelijke_antwoorden": ["Jean-Marc Jaumin (Landstede Hammers)","Sam Rotsaert (Spirou Charleroi)", "Ivica Skelin (Antwerp Giants)", "Douglas Spradley (ZZ Leiden)"],
+      "juist_antwoord": "Jean-Marc Jaumin (Landstede Hammers)",
+      "laatste_tekstje": "Dario Gjergja nam in het midden van seizoen 2011-12 het roer over van Jean-Marc Jaumin."
+    },
+    {
+      "vraag": "Welke center, die enkele seizoenen geleden de kleuren van BCO verdedigde, is nu Alltime Leader in Blocks in de G-League?",
+      "mogelijke_antwoorden": ["Shevon Thompson","Amar Sylla", "Amida Brimah", "Tonye Jekiri"],
+      "juist_antwoord": "Amida Brimah",
+      "laatste_tekstje": "Amida Brimah zijn teller staat op 297 en is daarmee de beste blocker in de G-League! Bij ons was hij goed voor 36 blocks."
+    },
+    {
+      "vraag": "Met welk rugnummer speelde Pierre-Antoine Gillet nooit bij BCO?",
+      "mogelijke_antwoorden": ["12", "13", "30", "Speelde met alle 3"],
+      "juist_antwoord": "13",
+      "laatste_tekstje": "Hij speelt enkel bij de Belgian Lions met nummer 13."
+    },
+    {
+      "vraag": "Hoeveel Belgische spelers zitten er in het 1ste team van Filou Oostende?",
+      "mogelijke_antwoorden": ["9","10", "11", "12"],
+      "juist_antwoord": "11",
+      "laatste_tekstje": "Dat is het meeste van alle Belgische ploegen."
+    },
+    {
+      "vraag": "Welke nationaliteit heeft Dario Gjergja?",
+      "mogelijke_antwoorden": ["Kroatische nationaliteit","Servische nationaliteit", "Belgische nationaliteit", "Kroatische en Belgische nationaliteit"],
+      "juist_antwoord": "Kroatische en Belgische nationaliteit",
+      "laatste_tekstje": "Dario Gjergja heeft een dubbele nationaliteit, zowel de Kroatische als de Belgische."
+    },
+    {
+      "vraag": "Wat is het hoogst aantal punten dat we ooit hebben gescoord in een wedstrijd?",
+      "mogelijke_antwoorden": ["111","112", "114", "115"],
+      "juist_antwoord": "115",
+      "laatste_tekstje": "Op 6 november 2022 wonnen we met 84-115 tegen Circus Brussels."
+    },
+    {
+      "vraag": "Wie heeft er de meeste punten in 1 wedstrijd gescoord?",
+      "mogelijke_antwoorden": ["Ryan Thompson","Jean Salumu", "Khalil Ahmad", "Pierre-Antoine Gillet"],
+      "juist_antwoord": "Khalil Ahmad",
+      "laatste_tekstje": "Khalil Ahmad scoorde nog recent op 2 maart 2024 37 punten tegen Basketbal Academie Limburg."
+    },
+    {
+      "vraag": "Hoeveel verschillende nationaliteiten zitten er momenteel in de 1ste ploeg van Filou Oostende?",
+      "mogelijke_antwoorden": ["3", "4", "5", "6"],
+      "juist_antwoord": "4",
+      "laatste_tekstje": "De verschillende nationaliteiten zijn, Belgie, Estland, Amerika en Nederland."
+    },
+    {
+      "vraag": "Wat is de voornaam van Tshienda-Baloji?",
+      "mogelijke_antwoorden": ["Haris","Thibaut", "Matthias", "Damien"],
+      "juist_antwoord": "Thibaut",
+      "laatste_tekstje": "De andere voornamen zijn van Haris Bratanovic, Matthias Tass en Damien Jefferson."
+    },
+    {
+      "vraag": "Hoeveel basketballen heeft Filou Oostende op dit moment?",
+      "mogelijke_antwoorden": ["30","32", "35", "40"],
+      "juist_antwoord": "35",
+      "laatste_tekstje": "We hebben 9 wedstrijdballen en 26 ballen voor de jeugd."
+    },
+    {
+      "vraag": "Welke speler is het oudst?",
+      "mogelijke_antwoorden": ["Sam Van Rossom","Dario Gjergja", "Edney Francisco Manuel", "Pierre-Antoine Gillet"],
+      "juist_antwoord": "Sam Van Rossom",
+      "laatste_tekstje": "Dario Gjergja is 11 jaar ouder dan Sam Van Rossom maar hij is geen speler."
+    },
+    {
+      "vraag": "Wie is geen jeugdproduct?",
+      "mogelijke_antwoorden": ["Servaas Buysschaert","Matteo Verstraete", "Sam Van Rossom", "Xander Pintelon"],
+      "juist_antwoord": "Xander Pintelon",
+      "laatste_tekstje": "Xander Pintelon heeft zijn jeugdopleiding gehad bij KBBC Oostkamp."
+    },
+    {
+      "vraag": "Welk merk is nooit hoofdsponsor geweest van BC Oostende?",
+      "mogelijke_antwoorden": ["Sunair","Telenet", "Casino Oostende", "Filou"],
+      "juist_antwoord": "Casino Oostende",
+      "laatste_tekstje": "Geniet van onze Casino Night!"
+    },
+    {
+      "vraag": "Hoelang noemt de arena al COREtec Dome?",
+      "mogelijke_antwoorden": ["Sinds juli 2020","Sinds maart 2022", "Sinds mei 2016", "Sinds september 2019"],
+      "juist_antwoord": "Sinds maart 2022",
+      "laatste_tekstje": "Voor maart 2022 noemde de arena de Versluys Dome."
+    },
+    {
+      "vraag": "Wat was geen krantenkop van de vorige match",
+      "mogelijke_antwoorden": ["Oostende komt nooit in de problemen tegen Zwolle: 99-78", "Supportersdag van de Bredenaars bij Filou Oostende", "Zwolle gaat teleurgesteld naar huis na verlies tegen Oostende", "Oostende wint opnieuw en blijft ongeslagen leider"],
+      "juist_antwoord": "Zwolle gaat teleurgesteld naar huis na verlies tegen Oostende",
+      "laatste_tekstje": "De andere artikels kwamen van Sporza, HLN en de Krant van West-Vlaanderen."
+    }
+  ]
+}
+

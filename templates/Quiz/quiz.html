@@ -89,11 +89,14 @@
     </style>
   </head>
   <body>
+    {% for sourceimg in imagesources %}
+    <link rel="preload" as="image" href="{{sourceimg}}">
+    {% endfor %}
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
     <div class="home-container">
       <div class="tile">
         <img
-          src="static/BCO-Filou-logo-voor-witte-achtergrond.png"
+          src="static/logo/BCO-Filou-logo-voor-witte-achtergrond.png"
           alt="BCO Filou logo"
           class="logo"
         />
@@ -103,7 +106,7 @@
         >
       </div>
       <div class="provided-text">provided by</div>
-      <img src="static/allsee-logo.png" alt="Allsee logo" class="AllseeLogo" />
+      <img src="static/logo/allsee-logo.png" alt="Allsee logo" class="AllseeLogo" />
     </div>
   </body>
 </html>

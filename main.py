@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, session
+from flask import Flask, redirect, url_for
 from Views.home import home
 from Views.kalender import kalender
 from Views.stand import stand
@@ -25,6 +25,9 @@ app.add_url_rule("/Quiz", view_func=quiz_home)
 app.add_url_rule("/Quiz/StartQuiz", view_func=start_quiz, methods=['GET', 'POST'])
 app.add_url_rule("/Feedback", view_func=feedback, methods=['GET', 'POST'])
 
+@app.errorhandler(Exception)
+def handle_exception(e):
+    return redirect(url_for('quiz.quiz_home'))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=os.getenv('PORT'))
