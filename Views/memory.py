@@ -53,7 +53,7 @@ def memory_game():
     random_images = random.sample(image_paths, k=8)
     card_images = random_images * 2
     random.shuffle(card_images)
-    return render_template("Memory/memory_game.html", card_images=card_images, background_source=getRandomImage("memory/achtergrond"))
+    return render_template("Memory/memory_game.html", card_images=card_images, background_source=getRandomImage("memory/eindscherm"))
 
 @memory_view.route("/Einde")
 def memory_end():

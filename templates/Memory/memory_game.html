@@ -22,16 +22,16 @@
         position: relative;
         width: 800px;
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
         row-gap: 15px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        background-image: linear-gradient(90deg, #fffbd5, #ccc);
+        background-color: #ffffff;
       }
 
       .cards-container {
         display: grid;
-        grid-template-rows: 125px 125px 125px;
-        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto auto;
         grid-gap: 20px 10px;
         place-items: center;
       }
@@ -42,6 +42,7 @@
 
       .gfg-heading {
         color: #dd8e07;
+        font-size: xx-large;
       }
 
       .card {
@@ -54,12 +55,10 @@
 
       .outline-image {
         position: absolute;
-        border-radius: 10px;
         top: 0;
         left: 0;
         height: 125px;
         width: 125px;
-        border-radius: 50%;
       }
 
       .card-image {
@@ -129,6 +128,21 @@
         margin-top: 20px;
         color: #333;
       }
+      .klicks {
+        position: absolute;
+        top: 7%;
+        right: 20px;
+        font-size: 1.2rem;
+        color: #333;
+      }
+      .BackHome {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      .BackHome img {
+        width: 50px;
+      }
 
       @media screen and (max-width: 767px) {
         .game-container {
@@ -162,15 +176,19 @@
     <div class="container">
       <div class="game-container">
         <div class="heading-container">
+          <a href="/Memory" class="BackHome"
+            ><img src="../static/house.png" alt="Back to home"
+          /></a>
           <h1 class="gfg-heading">Memory Game</h1>
           <div id="timer" class="timer">Tijd: 00:00</div>
+          <div id="click-counter" class="klicks">Combinaties: 0</div>
         </div>
         <div class="cards-container">
           {% for card_image in card_images %}
           <div class="card item">
             <img
               class="outline-image"
-              src="{{ url_for('static', filename='logo/BCO-Filou-logo-voor-witte-achtergrond.png') }}"
+              src="{{ url_for('static', filename='memory/achterkant.png') }}"
               alt="Card outline"
             />
             <img
@@ -190,24 +208,39 @@
       class="AllseeLogo"
     />
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cardImages = document.querySelectorAll(".card-image");
+        cardImages.forEach(function (image, index) {
+          image.id = "card-image-" + index;
+        });
+      });
+
       const cards = document.getElementsByClassName("card");
+      const clickCounter = document.getElementById("click-counter");
       let toggledCardsArray = [];
       let move = 0;
       let winCount = 0;
       let startTime = Date.now();
 
       function displayTime() {
-          let currentTime = Date.now();
-          let elapsedTime = Math.floor((currentTime - startTime) / 1000);
-          let minutes = Math.floor(elapsedTime / 60);
-          let seconds = elapsedTime % 60;
-          document.getElementById('timer').textContent = `Tijd: ${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        let currentTime = Date.now();
+        let elapsedTime = Math.floor((currentTime - startTime) / 1000);
+        let minutes = Math.floor(elapsedTime / 60);
+        let seconds = elapsedTime % 60;
+        document.getElementById("timer").textContent = `Tijd: ${
+          minutes < 10 ? "0" : ""
+        }${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
       }
 
       setInterval(displayTime, 1000);
 
-      for (var i = 0; i < cards.length; i++) {
-        cards[i].addEventListener("click", function () {
+      for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("click", handleCardClick);
+      }
+
+      function handleCardClick() {
+        // Controleren of de kaart al is omgedraaid
+        if (!this.classList.contains("toggled")) {
           this.classList.add("toggled");
           toggledCardsArray.push(this);
           let thisImgSrc = this.querySelector(".card-image").src;
@@ -215,6 +248,7 @@
             toggledCardsArray[toggledCardsArray.length - 2].querySelector(
               ".card-image"
             ).src;
+
           if (thisImgSrc !== previousImgSrc) {
             toggledCardsArray.forEach(function (el) {
               setTimeout(() => {
@@ -224,18 +258,31 @@
             toggledCardsArray.length = 0;
             move++;
           } else {
-            toggledCardsArray.length = 0;
-            move++;
-            winCount++;
+            if (toggledCardsArray.length === 2) {
+              toggledCardsArray.length = 0;
+              move++;
+              winCount++;
+            }
           }
-          const totalPairs = {{ card_images | length // 2 }};
+          updateMoveCounter();
+          const totalPairs = document.querySelectorAll(".card").length / 2;
 
           if (winCount === totalPairs) {
-            let endTime = Date.now();
-            let gameTimeInSeconds = Math.floor((endTime - startTime) / 1000);
-            window.location.href = `/Memory/Einde?moves=${move}&time=${gameTimeInSeconds}`;
+            handleGameEnd();
           }
-        });
+        }
+      }
+
+      function updateMoveCounter() {
+        clickCounter.textContent = `Combinaties: ${move}`;
+      }
+
+      function handleGameEnd() {
+        let endTime = Date.now();
+        let gameTimeInSeconds = Math.floor((endTime - startTime) / 1000);
+        setTimeout(function () {
+          window.location.href = `/Memory/Einde?moves=${move}&time=${gameTimeInSeconds}`;
+        }, 1000);
       }
     </script>
   </body>
