@@ -2,7 +2,7 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
-    <title>Quiz Eind</title>
+    <title>Memory Eind</title>
     <style>
       body {
         margin: 0;
@@ -143,18 +143,20 @@
     <div class="end-container">
       <div class="tile">
         <a href="/" class="BackHome"
-          ><img src="../static/house.png" alt="Back to home"
+          ><img src="../../static/house.png" alt="Back to home"
         /></a>
         <img
-          src="../static/logo/BCO-Filou-logo-voor-witte-achtergrond.png"
+          src="../../static/logo/BCO-Filou-logo-voor-witte-achtergrond.png"
           alt="BCO Filou logo"
           class="logo"
         />
         <h1 class="thank-you">Bedankt om te spelen!</h1>
         <h1 class="thank-you">Je bent nu officieel klaar voor UNSEEN 13</h1>
         <h1 class="thank-you kickoff">Kick-off 8 mei - 20u30</h1>
-        <p class="score">Je eindscore is: {{ eindscore }}/3</p>
-        <a href="/Quiz"
+        <p class="score">
+          Proficiat u wist het woord {{session["woord"]}} te raden
+        </p>
+        <a href="/Wordle"
           ><button id="play-again-button" class="play-again-button">
             Opnieuw spelen
           </button></a
@@ -163,7 +165,7 @@
     </div>
     <div class="provided-text">provided by</div>
     <img
-      src="../static/logo/allsee-logo.png"
+      src="../../static/logo/allsee-logo.png"
       alt="Allsee logo"
       class="AllseeLogo"
     />

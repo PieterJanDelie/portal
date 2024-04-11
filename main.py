@@ -8,6 +8,7 @@ from Views.quiz import start_quiz
 from Views.quiz import quiz_home
 from Views.feedback import feedback
 from Views.memory import memory_home, memory_game, memory_end
+from Views.wordle import wordle_game, wordle_home, wordle_end_geraden, wordle_end_N_geraden
 
 from dotenv import load_dotenv
 import os
@@ -28,11 +29,17 @@ app.add_url_rule("/Feedback", view_func=feedback, methods=['GET', 'POST'])
 app.add_url_rule("/Memory", view_func=memory_home)
 app.add_url_rule("/Memory/Play", view_func=memory_game)
 app.add_url_rule("/Memory/Einde", view_func=memory_end)
+app.add_url_rule("/Wordle", view_func=wordle_home)
+app.add_url_rule("/Wordle/Play", view_func=wordle_game)
+app.add_url_rule("/Wordle/Einde/Geraden", view_func=wordle_end_geraden)
+app.add_url_rule("/Wordle/Einde/NGeraden", view_func=wordle_end_N_geraden)
+
 
 
 @app.errorhandler(Exception)
 def handle_exception(e):
-    return redirect(url_for('quiz.quiz_home'))
+    print(e)
+    return redirect(url_for('home'))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=os.getenv('PORT'))

@@ -17,7 +17,7 @@ def get_image_paths():
     return image_paths
 
 def get_random_question(asked_questions):
-    with open('Data/Vragen/' + os.getenv('DATA_FILE'), 'r') as f:
+    with open('Data/Vragen/' + os.getenv('QUIZ_DATA_FILE'), 'r') as f:
         vragen = json.load(f)['vragen']
         beschikbare_vragen = [vraag for vraag in vragen if vraag['vraag'] not in asked_questions]
         return random.choice(beschikbare_vragen)
