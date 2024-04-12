@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <title>Memory Eind</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #dd8e07;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      display: none;
+    }
+
+    .popup-message {
+      margin-bottom: 10px;
+    }
+
+    .popup-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .popup-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .end-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .tile {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    .score {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .play-again-button {
+      background-color: #dd8e07;
+      color: #fff;
+      font-size: 24px;
+      padding: 20px 40px; 
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: xx-large;
+    }
+
+    .play-again-button:hover {
+      background-color: #ffd500;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+
+    .AllseeLogo {
+      position: absolute;
+      bottom: 2%;
+      width: 10%;
+      right: 0%;
+    }
+
+    .backgroundimage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .provided-text {
+      position: absolute;
+      bottom: 2%;
+      right: calc(10px + 10%);
+      font-size: 120%;
+    }
+
+    .kickoff{
+      font-weight: bold;
+    }
+    .popup{
+      font-size: xx-large;
+    }
+    .popup-buttons button{
+      background-color: #dd8e07;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: xx-large;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup" id="alert-box">
+    <div class="popup-message">Wil je op deze pagina blijven?</div>
+    <div class="popup-buttons">
+      <button onclick="resetTimer()">Ja</button>
+      <button onclick="navigateToQuiz()">Nee</button>
+    </div>
+  </div>
+  <img src="{{background_source}}" alt="background" class="backgroundimage" />
+  <div class="end-container">
+    <div class="tile">
+      <img
+        src="../../static/logo/BCO-Filou-logo-voor-witte-achtergrond.png"
+        alt="BCO Filou logo"
+        class="logo"
+      />
+      <h1 class="thank-you">Bedankt om te spelen!</h1>
+      <h1 class="thank-you">Je bent nu officieel klaar voor UNSEEN 13</h1>
+      <h1 class="thank-you kickoff">Kick-off 8 mei - 20u30</h1>
+      <p class="score">Spijtig u de rebus niet op te lossen!</p>
+      <a href="/Wordle"><button id="play-again-button" class="play-again-button">Opnieuw spelen</button></a>
+    </div>
+  </div>
+  <div class="provided-text">provided by</div>
+  <img src="../../static/logo/allsee-logo.png" alt="Allsee logo" class="AllseeLogo" />
+  <script>
+    var timer;
+
+    function navigateToQuiz() {
+      window.location.href = "/Quiz";
+    }
+
+    function resetTimer() {
+      var popup = document.getElementById('alert-box');
+      popup.style.display = 'none';
+
+      clearTimeout(timer);
+
+      timer = setTimeout(startAlertTimer, 20000);
+    }
+
+    function startAlertTimer() {
+      var popup = document.getElementById('alert-box');
+      popup.style.display = 'block';
+
+      timer = setTimeout(navigateToQuiz, 7500);
+    }
+
+    window.onload = function() {
+      resetTimer();
+    };
+  </script>
+</body>
+</html>

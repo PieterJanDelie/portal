@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCO-WORDLE!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      #game {
+        width: 50%;
+        max-height: 95%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+        text-align: center;
+      }
+
+      .BackHome {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      .BackHome img {
+        width: 50px;
+      }
+
+      header {
+        border-bottom: 1px solid rgb(58, 58, 60);
+      }
+
+      .title {
+        color: #dd8e07;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 0.4rem 0 0.4rem 0;
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      #board-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        overflow: hidden;
+      }
+
+      #board {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .square {
+        border: 2px solid rgb(58, 58, 60);
+        min-width: 40px;
+        min-height: 40px;
+        font-size: 33px;
+        font-weight: bold;
+        color: black;
+        text-transform: uppercase;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #keyboard-container {
+        height: 200px;
+      }
+
+      .keyboard-row {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto 8px;
+        touch-action: manipulation;
+      }
+
+      .keyboard-row button {
+        font-family: inherit;
+        font-weight: bold;
+        border: 0;
+        padding: 0;
+        height: 58px;
+        cursor: pointer;
+        background-color: rgb(129, 131, 132);
+        color: rgb(0, 0, 0);
+        flex-grow: 1;
+        text-transform: uppercase;
+        margin-right: 6px;
+        border-radius: 4px;
+        user-select: none;
+      }
+
+      .keyboard-row button.wide-button {
+        flex-grow: 1.5;
+      }
+
+      .spacer-half {
+        flex-grow: 0.5;
+      }
+
+      .backgroundimage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .rebusimg {
+        max-width: 90%;
+        max-height: 50%;
+      }
+      .woordgok-container {
+        width: 90%;
+        height: 10%;
+        border: 5px solid #dd8e07;
+        border-radius: 10px;
+        margin: 1% 5% 2% 5%
+      }
+
+      #woordgok {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="{{background_source}}" alt="background" class="backgroundimage" />
+    <div id="container">
+      <div id="game">
+        <header>
+          <h1 class="title">BCO-WORDLE</h1>
+          <a href="/Wordle" class="BackHome"
+            ><img src="../static/house.png" alt="Back to home"
+          /></a>
+        </header>
+        <input type="hidden" id="wordValue" value="{{ woord }}" />
+        <img src="{{rebus_source}}" alt="woord" , class="rebusimg" />
+        <div class="woordgok-container">
+          <p id="woordgok"></p>
+        </div>
+        <div id="keyboard-container">
+          <div class="keyboard-row">
+            <button id="a" data-key="a">a</button>
+            <button id="z" data-key="z">z</button>
+            <button id="e" data-key="e">e</button>
+            <button id="r" data-key="r">r</button>
+            <button id="t" data-key="t">t</button>
+            <button id="y" data-key="y">y</button>
+            <button id="u" data-key="u">u</button>
+            <button id="i" data-key="i">i</button>
+            <button id="o" data-key="o">o</button>
+            <button id="p" data-key="p">p</button>
+          </div>
+          <div class="keyboard-row">
+            <button id="q" data-key="q">q</button>
+            <button id="s" data-key="s">s</button>
+            <button id="d" data-key="d">d</button>
+            <button id="f" data-key="f">f</button>
+            <button id="g" data-key="g">g</button>
+            <button id="h" data-key="h">h</button>
+            <button id="j" data-key="j">j</button>
+            <button id="k" data-key="k">k</button>
+            <button id="l" data-key="l">l</button>
+            <button id="m" data-key="m">m</button>
+            <button id="-" data-key="-">-</button>
+            <button data-key="enter" class="wide-button">Enter</button>
+          </div>
+          <div class="keyboard-row">
+            <button id="w" data-key="w">w</button>
+            <button id="x" data-key="x">x</button>
+            <button id="c" data-key="c">c</button>
+            <button id="v" data-key="v">v</button>
+            <button data-key=" " class="wide-button">Spatie</button>
+            <button id="b" data-key="b">b</button>
+            <button id="n" data-key="n">n</button>
+            <button data-key="del" class="wide-button">Del</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let word = document.getElementById("wordValue").value;
+      word = word.trim().toLowerCase();
+      console.log(word);
+      const keyboardButtons = document.querySelectorAll("button");
+      keyboardButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const letter = button.dataset.key;
+          const currentText = document.getElementById("woordgok").textContent;
+
+          var newText = currentText;
+          if (letter === "enter") {
+            if (currentText === word) {
+              window.location.href = "/Rebus/Einde/Geraden";
+            } else {
+              window.location.href = "/Rebus/Einde/NGeraden";
+            }
+          } else if (letter === "del") {
+            newText = currentText.slice(0, -1);
+          } else {
+            newText += letter;
+          }
+
+          document.getElementById("woordgok").textContent = newText;
+        });
+      });
+    </script>
+  </body>
+</html>
