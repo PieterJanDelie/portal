@@ -39,7 +39,7 @@ app.add_url_rule("/Wordle/Einde/NGeraden", view_func=wordle_end_N_geraden)
 @app.errorhandler(Exception)
 def handle_exception(e):
     print(e)
-    return redirect(url_for('home'))
+    return redirect("/")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=os.getenv('PORT'))
