@@ -80,7 +80,7 @@ def start_questransfer():
             print("player: ", player)
             mogelijke_antwoorden = player_data['mogelijke_spelers']
             session['current_quesstransfer_question'] = player_data
-            return render_template("Quess_Transfer/player_start.html", vraag=history, mogelijke_antwoorden=mogelijke_antwoorden, background_source=getRandomImage("quesstransfer/spelers"), VraagNummer= session.get('players_answered', 0) + 1)
+            return render_template("Quess_Transfer/player_start.html", vraag=history, mogelijke_antwoorden=mogelijke_antwoorden, background_source=getRandomImage("spelers"), VraagNummer= session.get('players_answered', 0) + 1)
     elif request.method == 'POST':
         session['players_answered'] += 1
         player_data = session.get('current_quesstransfer_question')

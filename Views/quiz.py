@@ -78,7 +78,7 @@ def start_quiz():
             print("Vraag: ", vraag)
             mogelijke_antwoorden = vraag_data['mogelijke_antwoorden']
             session['current_quiz_question'] = vraag_data
-            return render_template("Quiz/quiz_start.html", vraag=vraag, mogelijke_antwoorden=mogelijke_antwoorden, background_source=getRandomImage("quiz/spelers"), VraagNummer= session.get('questions_answered', 0) + 1)
+            return render_template("Quiz/quiz_start.html", vraag=vraag, mogelijke_antwoorden=mogelijke_antwoorden, background_source=getRandomImage("spelers"), VraagNummer= session.get('questions_answered', 0) + 1)
     elif request.method == 'POST':
         session['questions_answered'] += 1
         vraag_data = session.get('current_quiz_question')

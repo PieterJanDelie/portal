@@ -84,17 +84,20 @@
         left: 10px;
       }
       .BackHome img {
-        width: 20px;
+        width: 50px;
       }
     </style>
   </head>
   <body>
     {% for sourceimg in imagesources %}
-    <link rel="preload" as="image" href="{{sourceimg}}">
+    <link rel="preload" as="image" href="{{sourceimg}}" />
     {% endfor %}
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
     <div class="home-container">
       <div class="tile">
+        <a href="/" class="BackHome"
+          ><img src="../static/house.png" alt="Back to home"
+        /></a>
         <img
           src="static/logo/BCO-Filou-logo-voor-witte-achtergrond.png"
           alt="BCO Filou logo"
@@ -106,7 +109,11 @@
         >
       </div>
       <div class="provided-text">provided by</div>
-      <img src="static/logo/allsee-logo.png" alt="Allsee logo" class="AllseeLogo" />
+      <img
+        src="static/logo/allsee-logo.png"
+        alt="Allsee logo"
+        class="AllseeLogo"
+      />
     </div>
   </body>
 </html>
