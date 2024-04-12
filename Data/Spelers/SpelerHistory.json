@@ -1,0 +1,95 @@
+{
+  "spelers": [
+    {
+      "history": "Mons-Hainaut (2015-2017) -> Aalst (2019) -> BCO",
+      "mogelijke_spelers": ["Simon Buysse","Sam van Rossom", "Haris Bratanovic", "Joppe Mennes"],
+      "juist_speler": "Simon Buysse",
+      "laatste_tekstje": "Simon won 4 keer de competitie en 1 keer de beker met BCO."
+    },
+    {
+      "history": "Boom (-2021) -> Lier (2020-2022) -> Mechelen (2021-2023) -> BCO (2023)",
+      "mogelijke_spelers": ["Xander Pintelon","Thibaut Tshienda-Baloji", "Joppe Mennes", "Edney Francisco Manuel"],
+      "juist_speler": "Joppe Mennes",
+      "laatste_tekstje": "Joppe gaat dit jaar vol voor zijn eerste prijs op het hoogste niveau."
+    },
+    {
+      "history": "BCO (2005-2008) -> Pesaro (2010) -> Zaragoza (2013) -> Valencia (2023) -> BCO",
+      "mogelijke_spelers": ["Jean Salumu","Damien Jefferson", "Khalil Ahmad", "Sam van Rossom"],
+      "juist_speler": "Sam van Rossom",
+      "laatste_tekstje": "Sam won al 2 kampioenschappen en 1 beker met BCO en 1 keer de competitie met Valencia."
+    },
+    {
+      "history": "BCO (2009-2018) -> Leuven (2012) -> Oudenaarde (2013) -> Sakarya (2018) -> Varese (2019) -> Pistoria (2020) -> Vechta (2021) -> Reims (2022) -> Trefl (2023) -> BCO (2023)",
+      "mogelijke_spelers": ["Damien Jefferson","Jean Salumu", "Haris Bratanovic", "Simon Buysse"],
+      "juist_speler": "Jean Salumu",
+      "laatste_tekstje": "Jean won al 7 keer de competitie en 8 keer de beker met BCO."
+    },
+    {
+      "history": "Kalev (2017) -> TTU KK(2018) -> Trento (2022) -> Gornicza (2022) -> Manresa (2023) -> BCO",
+      "mogelijke_spelers": ["Servaas Buysschaert","Haris Bratanovic", "Matthias Tass", "Khalil Ahmad"],
+      "juist_speler": "Matthias Tass",
+      "laatste_tekstje": "Tass won al de supercup met BCO."
+    },
+    {
+      "history": "BCO (2019)",
+      "mogelijke_spelers": ["Servaas Buysschaert","Xander Pintelon", "Simon Buysse", "Pierre-Antoine Gillet"],
+      "juist_speler": "Servaas Buysschaert",
+      "laatste_tekstje": "Servaas won al 5 keer de competitie en 1 keer de beker."
+    },
+    {
+      "history": "Barcelona 2 (2018-2020) -> BCO",
+      "mogelijke_spelers": ["Thibaut Tshienda-Baloji","Corentin Efono", "Sam van Rossom", "Haris Bratanovic"],
+      "juist_speler": "Haris Bratanovic",
+      "laatste_tekstje": "Haris won al drie keer de competitie en 1 keer de beker met BCO."
+    },
+    {
+      "history": "BCO (2020)",
+      "mogelijke_spelers": ["Corentin Efono","Simon Buysse", "Matteo Verstraete", "Xander Pintelon"],
+      "juist_speler": "Xander Pintelon",
+      "laatste_tekstje": "Xander won al 3 keer de competitie en 1 keer de beker met BCO."
+    },
+    {
+      "history": "BCO (2022)",
+      "mogelijke_spelers": ["Corentin Efono","Thibaut Tshienda-Baloji", "Matteo Verstraete", "Servaas Buysschaert"],
+      "juist_speler": "Matteo Verstraete",
+      "laatste_tekstje": "Matteo won al 2 keer de competitie met BCO."
+    },
+    {
+      "history": "Kings (2021-2022) -> Memphis Hustle (2023) -> BCO",
+      "mogelijke_spelers": ["Khalil Ahmad","Damien Jefferson", "Sam van Rossom", "Pierre-Antoine Gillet"],
+      "juist_speler": "Damien Jefferson",
+      "laatste_tekstje": "Damien gaat nu volop voor zijn eerste titel met BCO."
+    },
+    {
+      "history": "Luik (2009-2013) -> BCO (2017) -> Elan Chalon (2018) -> Canarias (2019) -> Fuenlabrada (2020) -> BCO",
+      "mogelijke_spelers": ["Sam van Rossom","Pierre-Antoine Gillet", "Simon Buysse", "Xander Pintelon"],
+      "juist_speler": "Pierre-Antoine Gillet",
+      "laatste_tekstje": "PAG won al 7 keer de competitie en 5 keer de beker met BCO"
+    },
+    {
+      "history": "Vilvoorde jeugd (2016-2023) -> BCO",
+      "mogelijke_spelers": ["Corentin Efono","Edney Francisco Manuel", "Thibaut Tshienda-Baloji", "Xander Pintelon"],
+      "juist_speler": "Thibaut Tshienda-Baloji",
+      "laatste_tekstje": "Thibaut gaat dit jaar vol voor zijn eerste titel met BCO."
+    },
+    {
+      "history": "Aalst jeugd (2012-2022) -> BCO",
+      "mogelijke_spelers": ["Corentin Efono","Edney Francisco Manuel", "Thibaut Tshienda-Baloji", "Xander Pintelon"],
+      "juist_speler": "Corentin Efono",
+      "laatste_tekstje": "Efono gaat dit jaar vol voor zijn eerste titel met BCO."
+    },
+    {
+      "history": "BCO Jeugd/A-kern (2022)",
+      "mogelijke_spelers": ["Corentin Efono","Edney Francisco Manuel", "Thibaut Tshienda-Baloji", "Xander Pintelon"],
+      "juist_speler": "Edney Francisco Manuel",
+      "laatste_tekstje": "Edney gaat dit jaar vol voor zijn eerste titel met BCO."
+    },
+    {
+      "history": "Keflavik (2019-2020) -> Tanger (2021) -> Horsens (2022) -> River Lions (2022) -> Hapoel (2023) -> BCO",
+      "mogelijke_spelers": ["Khalil Ahmad","Damien Jefferson", "Matthias Tass", "Matteo Verstraete"],
+      "juist_speler": "Khalil Ahmad",
+      "laatste_tekstje": "Khalil gaat dit jaar vol voor zijn eerste titel met BCO."
+    }
+  ]
+}
+
