@@ -14,7 +14,7 @@ def get_image_paths():
     return image_paths
 
 def get_random(filename, hoofdvariabele, asked_objecten = [], localvariabele = ""):
-    with open('Data/Spelers/' + filename, 'r') as f:
+    with open('Data/' + filename, 'r') as f:
         hoofdObject = json.load(f)[hoofdvariabele]
         if len(asked_objecten) <= 0:
             return hoofdObject
