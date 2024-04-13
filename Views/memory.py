@@ -1,13 +1,13 @@
 import random
 from flask import Blueprint, render_template, request
 from datetime import datetime
-from services.gameFuncties import get_image_paths, get_images, getRandomImage, write_to_csv
+from services.gameFuncties import get_images, getRandomImage, write_to_csv
 
 memory_view = Blueprint('memory', __name__, template_folder='templates')
 
 @memory_view.route("/")
 def memory_home():
-    return render_template("Memory/memory.html", background_source=getRandomImage("memory/startscherm", InParentFolder=False), imagesources=get_image_paths())
+    return render_template("Memory/memory.html", background_source=getRandomImage("memory/startscherm", InParentFolder=False))
 
 @memory_view.route("/Play")
 def memory_game():

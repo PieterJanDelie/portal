@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, session
 import os
 from datetime import datetime
-from services.gameFuncties import get_image_paths, get_random, write_to_csv, getRandomImage
+from services.gameFuncties import write_to_csv, getRandomImage
 
 wordle_view = Blueprint('wordle', __name__, template_folder='templates')
 
@@ -10,7 +10,7 @@ wordle_view = Blueprint('wordle', __name__, template_folder='templates')
 def wordle_home():
     session["woord"]=""
     background_source=getRandomImage("wordle/spelers", InParentFolder=False)
-    return render_template("Wordle/wordle.html", background_source=background_source, imagesources=get_image_paths())
+    return render_template("Wordle/wordle.html", background_source=background_source)
 
 
 @wordle_view.route("/Play")
@@ -18,6 +18,7 @@ def wordle_game():
     background_source=getRandomImage("wordle/spelers")
     woord = get_random(os.getenv('WORDLE_DATA_FILE'), 'woorden')
     session["woord"] = woord
+    print(woord)
     return render_template("Wordle/wordle_start.html", background_source=background_source, woord=woord)
     
 

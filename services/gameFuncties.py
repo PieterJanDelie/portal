@@ -17,9 +17,9 @@ def get_random(filename, hoofdvariabele, asked_objecten = [], localvariabele = "
     with open('Data/' + filename, 'r') as f:
         hoofdObject = json.load(f)[hoofdvariabele]
         if len(asked_objecten) <= 0:
-            return hoofdObject
+            return random.choice(hoofdObject)
         else:
-            beschikbare_objecten = [obj for obj in hoofdObject if hoofdObject[localvariabele] not in asked_objecten]
+            beschikbare_objecten = [obj for obj in hoofdObject if obj[localvariabele] not in asked_objecten]
             return random.choice(beschikbare_objecten)
 
 def write_to_csv(filename, data):

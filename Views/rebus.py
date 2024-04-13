@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, session
 import os
 from datetime import datetime
-from services.gameFuncties import get_image_paths, get_random, write_to_csv, getRandomImage
+from services.gameFuncties import write_to_csv, getRandomImage
 
 rebus_view = Blueprint('rebus', __name__, template_folder='templates')
 
@@ -10,7 +10,7 @@ rebus_view = Blueprint('rebus', __name__, template_folder='templates')
 def rebus_home():
     session["woord"]=""
     background_source=getRandomImage("spelers", InParentFolder=False)
-    return render_template("Rebus/rebus.html", background_source=background_source, imagesources=get_image_paths())
+    return render_template("Rebus/rebus.html", background_source=background_source)
 
 
 @rebus_view.route("/Play")

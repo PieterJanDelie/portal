@@ -59,6 +59,9 @@
     </style>
   </head>
   <body>
+    {% for sourceimg in imagesources %}
+    <link rel="preload" as="image" href="{{sourceimg}}" />
+    {% endfor %}
     <div class="container">
       <h1>Welkom bij BCO</h1>
       <h2>Wat wilt u doen</h2>

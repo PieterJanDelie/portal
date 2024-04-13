@@ -11,8 +11,7 @@ def questransfer_home():
     print("reset")
     session['correct_answers'] = 0
     session['asked_players'] = []
-    image_paths = get_image_paths()
-    return render_template("Quess_Transfer/player.html", background_source=getRandomImage("quesstransfer/startscherm", InParentFolder=False),imagesources=image_paths)
+    return render_template("Quess_Transfer/player.html", background_source=getRandomImage("quesstransfer/startscherm", InParentFolder=False))
 
 @questransfer_view.route("/Start", methods=['GET', 'POST'])
 def start_questransfer():
