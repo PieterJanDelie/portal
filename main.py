@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, send_from_directory
 from Views.home import home
 from Views.kalender import kalender
 from Views.stand import stand
@@ -19,6 +19,9 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY')
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), "Photos/Logo/BCO-Filou-logo-voor-witte-achtergrond.ico")
 app.add_url_rule("/", view_func=home)
 app.add_url_rule("/Kalender", view_func=kalender)
 app.add_url_rule("/Stand", view_func=stand)
