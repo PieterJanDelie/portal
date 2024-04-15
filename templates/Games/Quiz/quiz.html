@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #dd8e07;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: xx-large;
+      }
+      .home-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .tile {
+        position: relative;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+        text-align: center;
+      }
+
+      .logo {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+
+      .start-quiz-button {
+        background-color: #dd8e07;
+        color: #fff;
+        font-size: 24px;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 20px 0px 5px 0px;
+        font-size: xx-large;
+      }
+
+      .start-quiz-button:hover {
+        background-color: #ffd500;
+        color: #333;
+        transition: background-color 0.3s ease;
+      }
+      .beginText {
+        font-size: 2em;
+      }
+      .AllseeLogo {
+        position: absolute;
+        bottom: 2%;
+        right: 0%;
+        width: 10%;
+      }
+      .provided-text {
+        position: absolute;
+        bottom: 2%;
+        right: calc(10px + 10%);
+        font-size: 120%;
+      }
+      .backgroundimage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .BackHome {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      .BackHome img {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="{{background_source}}" alt="background" class="backgroundimage" />
+    <div class="home-container">
+      <div class="tile">
+        <a href="/" class="BackHome"
+          ><img src="../../static/house.png" alt="Back to home"
+        /></a>
+        <img
+          src="../../static/Logo/BCO-Filou-logo-voor-witte-achtergrond.png"
+          alt="BCO Filou logo"
+          class="logo"
+        />
+        <h1 class="beginText">Begin de BCO-Quiz</h1>
+        <a href="/Quiz/StartQuiz"
+          ><button class="start-quiz-button">Start Quiz</button></a
+        >
+      </div>
+      <div class="provided-text">provided by</div>
+      <img
+        src="../../static/Logo/allsee-logo.png"
+        alt="Allsee logo"
+        class="AllseeLogo"
+      />
+    </div>
+  </body>
+</html>

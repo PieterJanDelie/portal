@@ -4,13 +4,12 @@ from Views.kalender import kalender
 from Views.stand import stand
 from Views.uitslagen import uitslagen
 from Views.team import team
-from Views.quiz import start_quiz
-from Views.quiz import quiz_home
 from Views.feedback import feedback
-from Views.memory import memory_home, memory_game, memory_end
-from Views.wordle import wordle_game, wordle_home, wordle_end_geraden, wordle_end_N_geraden
-from Views.Quess_Transfer import start_questransfer, questransfer_home
-from Views.rebus import rebus_home, rebus_game, rebus_end_geraden, rebus_end_N_geraden
+from Views.Games.quiz import start_quiz, quiz_home
+from Views.Games.memory import memory_home, memory_game, memory_end
+from Views.Games.wordle import wordle_game, wordle_home, wordle_end_geraden, wordle_end_N_geraden
+from Views.Games.quess_Transfer import start_questransfer, questransfer_home
+from Views.Games.rebus import rebus_home, rebus_game, rebus_end_geraden, rebus_end_N_geraden
 
 from dotenv import load_dotenv
 import os
