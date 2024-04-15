@@ -177,7 +177,7 @@
       <div class="game-container">
         <div class="heading-container">
           <a href="/Memory" class="BackHome"
-            ><img src="../../static/house.png" alt="Back to home"
+            ><img src="../../static/Photos/house.png" alt="Back to home"
           /></a>
           <h1 class="gfg-heading">Memory Game</h1>
           <div id="timer" class="timer">Tijd: 00:00</div>
@@ -188,12 +188,12 @@
           <div class="card item">
             <img
               class="outline-image"
-              src="{{ url_for('static', filename='Games/Memory/achterkant.png') }}"
+              src="{{ url_for('static', filename='Photos/Games/Memory/achterkant.png') }}"
               alt="Card outline"
             />
             <img
               class="card-image"
-              src="{{ url_for('static', filename=card_image) }}"
+              src="{{ url_for('static', filename="Photos/" +card_image) }}"
               alt="{{ card_image.split('/')[-1].split('.')[0] }}"
             />
           </div>
@@ -203,7 +203,7 @@
     </div>
     <div class="provided-text">provided by</div>
     <img
-      src="../../static/Logo/allsee-logo.png"
+      src="../../static/Photos/Logo/allsee-logo.png"
       alt="Allsee logo"
       class="AllseeLogo"
     />

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 def get_image_paths():
     image_paths = []
-    static_dir = "static/"
+    static_dir = "static/Photos/"
     for root, _, files in os.walk(static_dir):
         for file in files:
             if file.endswith(('.jpg', '.png')):
@@ -33,7 +33,7 @@ def write_to_csv(filename, data):
         writer.writerow(data)
 
 def getRandomImage(subfolder, InParentFolder=True):
-    image_dir = "static/"+ subfolder
+    image_dir = "static/Photos/"+ subfolder
     image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.png'))]
     if image_files:
         url = ""
@@ -42,9 +42,9 @@ def getRandomImage(subfolder, InParentFolder=True):
         url += image_dir + "/" + random.choice(image_files)
         return url
     else:
-        return "../static/yellowbackground.jpg" # Default
+        return "../static/Photos/yellowbackground.jpg" # Default
 
 def get_images(subfolder):
-    image_dir = "static/"+ subfolder
+    image_dir = "static/Photos/"+ subfolder
     image_files = [f"{subfolder}/{f}" for f in os.listdir(image_dir) if f.endswith(('.jpg', '.png'))]
     return image_files
