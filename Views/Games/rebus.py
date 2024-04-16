@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, session
 import os
 from datetime import datetime
-from services.gameFuncties import write_to_csv, getRandomImage
+from services.algemeneFuncties import write_to_csv, getRandomImage
 
 rebus_view = Blueprint('rebus', __name__, template_folder='templates')
 

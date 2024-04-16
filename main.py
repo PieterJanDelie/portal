@@ -10,6 +10,7 @@ from Views.Games.memory import memory_home, memory_game, memory_end
 from Views.Games.wordle import wordle_game, wordle_home, wordle_end_geraden, wordle_end_N_geraden
 from Views.Games.quess_Transfer import start_questransfer, questransfer_home
 from Views.Games.rebus import rebus_home, rebus_game, rebus_end_geraden, rebus_end_N_geraden
+from Views.Games.wat_liever import watLiever_home, start_watLiever
 
 from dotenv import load_dotenv
 import os
@@ -43,6 +44,8 @@ app.add_url_rule("/Rebus", view_func=rebus_home)
 app.add_url_rule("/Rebus/Play", view_func=rebus_game)
 app.add_url_rule("/Rebus/Einde/Geraden", view_func=rebus_end_geraden)
 app.add_url_rule("/Rebus/Einde/NGeraden", view_func=rebus_end_N_geraden)
+app.add_url_rule("/WatLiever", view_func=watLiever_home)
+app.add_url_rule("/WatLiever/Start", view_func=start_watLiever, methods=['GET', 'POST'])
 
 
 

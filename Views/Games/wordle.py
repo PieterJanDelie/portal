@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, session
 import os
 from datetime import datetime
-from services.gameFuncties import write_to_csv, getRandomImage, get_random
+from services.algemeneFuncties import write_to_csv, getRandomImage, get_random
 
 wordle_view = Blueprint('wordle', __name__, template_folder='templates')
 

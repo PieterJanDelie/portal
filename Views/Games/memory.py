@@ -1,7 +1,7 @@
 import random
 from flask import Blueprint, render_template, request
 from datetime import datetime
-from services.gameFuncties import get_images, getRandomImage, write_to_csv
+from services.algemeneFuncties import get_images, getRandomImage, write_to_csv
 
 memory_view = Blueprint('memory', __name__, template_folder='templates')
 

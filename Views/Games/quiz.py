@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, session
 import os
 from datetime import datetime
-from services.gameFuncties import get_random, write_to_csv, getRandomImage
+from services.algemeneFuncties import get_random, write_to_csv, getRandomImage
 
 quiz_view = Blueprint('quiz', __name__, template_folder='templates')
 

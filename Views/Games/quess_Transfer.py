@@ -1,7 +1,7 @@
 import os
 from flask import Blueprint, render_template, request, session
 from datetime import datetime
-from services.gameFuncties import getRandomImage, write_to_csv, get_random
+from services.algemeneFuncties import getRandomImage, write_to_csv, get_random
 
 questransfer_view = Blueprint('quesstransfer', __name__, template_folder='templates')
 
