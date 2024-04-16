@@ -1,8 +1,9 @@
 import json
 import os
 from flask import Blueprint, render_template, request, session
-from services.algemeneFuncties import get_random, write_to_csv, getRandomImage
+from services.algemeneFuncties import write_to_csv, getRandomImage
 import random
+from datetime import datetime
 
 watLiever_view = Blueprint('watLiever', __name__, template_folder='templates')
 
@@ -44,4 +45,6 @@ def start_watLiever():
 
         with open(json_file_path, 'w') as f:
             json.dump(updated_data, f, indent=4)
+        
+        write_to_csv("WatLiever/Antwoorden.csv", [datetime.now(), currentVraag, gekozen_optie])
         return render_template("Games/WatLiever/watliever_tussenscherm.html", background_source=getRandomImage("Games/WatLiever/Startscherm", InParentFolder=True), vraag=currentVraag, procent=50) 
