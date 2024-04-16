@@ -11,6 +11,7 @@ from Views.Games.wordle import wordle_game, wordle_home, wordle_end_geraden, wor
 from Views.Games.quess_Transfer import start_questransfer, questransfer_home
 from Views.Games.rebus import rebus_home, rebus_game, rebus_end_geraden, rebus_end_N_geraden
 from Views.Games.wat_liever import watLiever_home, start_watLiever
+from Views.Games.gamecenter import GameCenter_Home
 
 from dotenv import load_dotenv
 import os
@@ -28,6 +29,7 @@ app.add_url_rule("/Kalender", view_func=kalender)
 app.add_url_rule("/Stand", view_func=stand)
 app.add_url_rule("/Uitslagen", view_func=uitslagen)
 app.add_url_rule("/Team", view_func=team)
+app.add_url_rule("/GameCenter", view_func=GameCenter_Home)
 app.add_url_rule("/Quiz", view_func=quiz_home)
 app.add_url_rule("/Quiz/StartQuiz", view_func=start_quiz, methods=['GET', 'POST'])
 app.add_url_rule("/Feedback", view_func=feedback, methods=['GET', 'POST'])
