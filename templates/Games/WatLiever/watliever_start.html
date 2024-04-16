@@ -17,7 +17,7 @@
       }
       .container {
         position: relative;
-        max-width: 50%;
+        min-width: 50%;
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
@@ -34,28 +34,29 @@
         background-color: #dd8e07;
         color: #fff;
         border: none;
-        padding: 200px 40px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        margin: 20px 0px 5px 0px;
+        margin: 20px 10px 5px 10px;
         border-radius: 10px;
         font-size: xx-large;
+        min-width: 400px;
+        height: 400px;
       }
       input[type="submit"]:hover {
-        background-color: #ffd500;
-        color: #333;
+        background-color: #ffd500 !important;
+        color: #333 !important;
       }
       .eersteOptie {
-        background-color: #ffd500;
-        color: #333;
+        background-color: #dd8e07 !important;
+        color: #333 !important;
       }
       .tweedeOptie {
-        background-color: #333;
-        color: #ffd500;
+        background-color: #333 !important;
+        color: #dd8e07 !important;
       }
       .backgroundimage {
         position: fixed;
@@ -91,7 +92,7 @@
         margin: 20px;
         font-size: xx-large;
       }
-      .formcontainer{
+      .formcontainer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -105,15 +106,14 @@
         ><img src="../../static/Photos/house.png" alt="Back to home"
       /></a>
       <h1>Wat heb je liever?</h1>
-        <form method="post">
-          <div class="formcontainer">
+      <form method="post">
+        <div class="formcontainer">
           <input
             type="submit"
             name="keuze"
             value="{{ vraag.optie1 }}"
             class="eersteOptie"
           />
-          <p>of</p>
           <input
             type="submit"
             name="keuze"
@@ -121,7 +121,7 @@
             class="tweedeOptie"
           />
         </div>
-        </form>
+      </form>
     </div>
     <div class="provided-text">provided by</div>
     <img

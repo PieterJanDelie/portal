@@ -18,14 +18,15 @@
       .container {
         position: relative;
         background-color: #ffffff;
-        max-width: 50%;
+        min-width: 50%;
+        max-width: 75%;
         border-radius: 10px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
         padding: 20px;
         text-align: center;
       }
       h1 {
-        color: #dd8e07;
+        color: #000;
         margin-top: 0;
       }
       p {
@@ -89,9 +90,8 @@
       <a href="/WatLiever" class="BackHome"
         ><img src="../../static/Photos/house.png" alt="Back to home"
       /></a>
-      <h1>{{vraag.optie1}} of {{vraag.optie2}}</h1>
+      <h1>Wat wil de rest?</h1>
       <p>{{ ((vraag.numOptie1 / (vraag.numOptie1 + vraag.numOptie2)) * 100) | round }}% koos voor "{{vraag.optie1}}"</p>
-      <p>en</p>
       <p>{{ ((vraag.numOptie2 / (vraag.numOptie1 + vraag.numOptie2)) * 100) | round }}% koos voor "{{vraag.optie2}}"</p>
       <a href="/WatLiever/Start"
         ><button class="new-question-btn">Volgende</button></a

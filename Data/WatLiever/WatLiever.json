@@ -1,16 +1,28 @@
 {
-    "WatLiever":[
+    "WatLiever": [
         {
-            "optie1":"Kunnen shotten als Gillet",
+            "optie1": "Shotten als Gillet",
             "optie2": "Driven als Khalil Ahmad",
+            "numOptie1": 4,
+            "numOptie2": 1
+        },
+        {
+            "optie1": "Dansen als de cheerleaders",
+            "optie2": "De looks van Filou",
             "numOptie1": 1,
+            "numOptie2": 5
+        },
+        {
+            "optie1": "BCO altijd kampioen",
+            "optie2": "KVO 1 keer kampioen",
+            "numOptie1": 3,
             "numOptie2": 3
         },
         {
-            "optie1":"Kunnen dansen als de cheerleaders",
-            "optie2": "De looks van Filou",
-            "numOptie1": 1,
-            "numOptie2": 3
+            "optie1": "Match op vrijdag",
+            "optie2": "Match op zaterdag",
+            "numOptie1": 4,
+            "numOptie2": 2
         }
     ]
 }
