@@ -79,9 +79,6 @@
     </style>
   </head>
   <body>
-    {% for sourceimg in imagesources %}
-    <link rel="preload" as="image" href="{{sourceimg}}" />
-    {% endfor %}
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
     <div>
       <div class="orangefilter"></div>

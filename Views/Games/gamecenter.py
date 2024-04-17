@@ -5,4 +5,4 @@ game_view = Blueprint('Games', __name__, template_folder='templates')
 
 @game_view.route("")
 def GameCenter_Home():
-    return render_template("Games/GameCenter.html", imagesources=get_image_paths(),  background_source=getRandomImage("Games/GameCenter/Startscherm"))
+    return render_template("Games/GameCenter.html",  background_source=getRandomImage("Games/GameCenter/Startscherm"))
