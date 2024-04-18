@@ -49,6 +49,13 @@ def start_quiz():
             session['correct_answers'] = session.get('correct_answers', 0) + 1
 
         if answer == juist_antwoord:
-            return render_template("Games/Quiz/quiz_correct.html", antwoord=juist_antwoord, laatste_tekstje=vraag_data["laatste_tekstje"], background_source=getRandomImage("Games/Quiz/Antwoorden/Juist"))
+            background_source=getRandomImage("Games/Quiz/Antwoorden/Juist")
+            title="Correct antwoord"
+            inhoud=["Proficiat uw antwoord " + answer +" was juist!"]
         else:
-            return render_template("Games/Quiz/quiz_incorrect.html", antwoord=juist_antwoord, geantwoord=answer, laatste_tekstje=vraag_data["laatste_tekstje"], background_source=getRandomImage("Games/Quiz/Antwoorden/Fout"))
+            background_source=getRandomImage("Games/Quiz/Antwoorden/Fout")
+            title="Fout antwoord"
+            inhoud=["Spijtig, jouw antwoord "+ answer +" was verkeerd.","Het juiste antwoord was "+ juist_antwoord + "."]
+            
+        inhoud.append(vraag_data["laatste_tekstje"])
+        return render_template("Games/Tussenscherm.html", background_source=background_source, inhoud=inhoud, href="/Quiz/Play", title=title)

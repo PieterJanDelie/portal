@@ -49,4 +49,8 @@ def start_watLiever():
             json.dump(updated_data, f, indent=4)
         
         write_to_csv("WatLiever/Antwoorden.csv", [datetime.now(), currentVraag, gekozen_optie])
-        return render_template("Games/WatLiever/watliever_tussenscherm.html", background_source=getRandomImage("Games/WatLiever/Startscherm", InParentFolder=True), vraag=currentVraag, procent=50) 
+        background_source=getRandomImage("Games/WatLiever/Startscherm", InParentFolder=True)
+        print(currentVraag)
+        procent1= int(currentVraag.get("numOptie1") / (currentVraag.get("numOptie1") + currentVraag.get("numOptie2")) * 100)
+        inhoud=[str(procent1) + "% koos voor " + currentVraag.get("optie1") + ".", str(100-procent1) + "% koos voor " + currentVraag.get("optie2") + "."]
+        return render_template("Games/Tussenscherm.html", background_source=background_source, inhoud=inhoud, href="/WatLiever/Play", title="Wat wil de rest?")

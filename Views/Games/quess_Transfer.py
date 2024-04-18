@@ -50,6 +50,10 @@ def start_questransfer():
             session['correct_answers'] = session.get('correct_answers', 0) + 1
 
         if answer == juist_antwoord:
-            return render_template("Games/Quess_Transfer/player_correct.html", antwoord=juist_antwoord, laatste_tekstje=player_data["laatste_tekstje"], background_source=getRandomImage("Games/Quesstransfer/Antwoorden/Juist"))
+            background_source=getRandomImage("Games/Quesstransfer/Antwoorden/Juist")
+            inhoud=["Proficiat uw antwoord " + answer +" was juist!", player_data["laatste_tekstje"]]
+            return render_template("Games/Tussenscherm.html", background_source=background_source, inhoud=inhoud, href="/QuessTransfer/Play", title="Correct antwoord")
         else:
-            return render_template("Games/Quess_Transfer/player_incorrect.html", antwoord=juist_antwoord, geantwoord=answer, laatste_tekstje=player_data["laatste_tekstje"], background_source=getRandomImage("Games/Quesstransfer/Antwoorden/Fout"))
+            background_source=getRandomImage("Games/Quesstransfer/Antwoorden/Fout")
+            inhoud=["Spijtig, jouw antwoord "+ answer +" was verkeerd.","Het juiste antwoord was "+ juist_antwoord + ".", player_data["laatste_tekstje"]]
+            return render_template("Games/Tussenscherm.html", background_source=background_source, inhoud=inhoud, href="/QuessTransfer/Play", title="Fout antwoord")
