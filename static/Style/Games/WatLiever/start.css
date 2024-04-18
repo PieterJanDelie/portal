@@ -52,35 +52,6 @@ input[type="submit"]:hover {
   background-color: #333 !important;
   color: #dd8e07 !important;
 }
-.backgroundimage {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.AllseeLogo {
-  position: absolute;
-  bottom: 2%;
-  width: 10%;
-  right: 0%;
-}
-.provided-text {
-  position: absolute;
-  bottom: 2%;
-  right: calc(10px + 10%);
-  font-size: 120%;
-}
-.BackHome {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.BackHome img {
-  width: 50px;
-}
 .answerstyle {
   transform: scale(2);
   margin: 20px;

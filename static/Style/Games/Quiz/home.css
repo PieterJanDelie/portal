@@ -51,32 +51,3 @@ body {
 .beginText {
   font-size: 2em;
 }
-.AllseeLogo {
-  position: absolute;
-  bottom: 2%;
-  right: 0%;
-  width: 10%;
-}
-.provided-text {
-  position: absolute;
-  bottom: 2%;
-  right: calc(10px + 10%);
-  font-size: 120%;
-}
-.backgroundimage {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.BackHome {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.BackHome img {
-  width: 50px;
-}

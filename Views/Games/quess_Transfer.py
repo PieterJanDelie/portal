@@ -26,7 +26,7 @@ def start_questransfer():
             else:
                 background_source=getRandomImage("Games/Quesstransfer/Eindscore/Slecht")
                 write_to_csv("QuesTransfer/Eindscores.csv", [datetime.now(), eindscore])
-            return render_template("Games/Quess_Transfer/player_end.html", eindscore=eindscore, background_source=background_source)
+            return render_template("Games/End.html",game="Raad de speler", beschrijving="Je eindscore is: "+ str(eindscore) +"/3", background_source=background_source, href="/QuessTransfer")
         else:
             player_data = get_random(os.getenv('TRANSFER_DATA_FILE'), 'spelers',asked_objecten=session.get('asked_players', []), localvariabele='history')
             history = player_data['history']

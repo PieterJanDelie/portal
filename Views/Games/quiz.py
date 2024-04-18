@@ -26,7 +26,7 @@ def start_quiz():
             else:
                 background_source=getRandomImage("Games/Quiz/Eindscore/Slecht")
             write_to_csv("Quiz/Eindscores.csv", [datetime.now(), eindscore])
-            return render_template("Games/Quiz/quiz_end.html", eindscore=eindscore, background_source=background_source)
+            return render_template("Games/End.html",game="Quiz", beschrijving="Je eindscore is: "+ str(eindscore) +"/3", background_source=background_source, href="/Quiz")
         else:
             vraag_data = get_random(os.getenv('QUIZ_DATA_FILE'),'vragen', asked_objecten=session.get('asked_questions', []), localvariabele='vraag')
             vraag = vraag_data['vraag']

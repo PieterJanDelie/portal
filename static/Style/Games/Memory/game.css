@@ -91,28 +91,6 @@ body {
   transition-delay: 0s;
 }
 
-.backgroundimage {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.AllseeLogo {
-  position: absolute;
-  bottom: 2%;
-  right: 0%;
-  width: 10%;
-}
-.provided-text {
-  position: absolute;
-  bottom: 2%;
-  right: calc(10px + 10%);
-  font-size: 120%;
-}
-
 .timer {
   position: absolute;
   top: 0;

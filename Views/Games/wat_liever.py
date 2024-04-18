@@ -28,7 +28,8 @@ def watLiever_home():
 def start_watLiever():
     if request.method == 'GET':
         if not session['watLieverQuestions']:
-            return render_template("Games/WatLiever/watliever_end.html", background_source=getRandomImage("Games/WatLiever/Eindscherm", InParentFolder=True))
+            background_source=getRandomImage("Games/WatLiever/Eindscherm", InParentFolder=True)
+            return render_template("Games/End.html",game="WatLiever", beschrijving="Je hebt alles ingevuld bedankt!", background_source=background_source, href="/WatLiever")
         watLieverVraag = session['watLieverQuestions'].pop(random.randint(0, len(session['watLieverQuestions']) - 1))
         session["currentWatLiever"] = watLieverVraag
         return render_template("Games/WatLiever/watliever_start.html", background_source=getRandomImage("Games/WatLiever/Startscherm", InParentFolder=True), vraag=watLieverVraag)

@@ -27,11 +27,11 @@ def wordle_end_geraden():
     background_source=getRandomImage("Games/Wordle/Eindscherm/Goed")
     woord = session["woord"]
     write_to_csv("Wordle/Eindscores.csv", [datetime.now(), woord, "Geraden"])
-    return render_template("Games/Wordle/wordle_end_geraden.html", background_source="../" + background_source, woord=woord)
+    return render_template("Games/End.html",game="Wordle", beschrijving="Proficiat u wist de rebus "+ woord + " op te lossen!", background_source=background_source, href="/Wordle")
 
 @wordle_view.route("/Einde/NGeraden")
 def wordle_end_N_geraden():
     background_source=getRandomImage("Games/Wordle/Eindscherm/Slecht")
     woord = session["woord"]
     write_to_csv("Wordle/Eindscores.csv", [datetime.now(), woord, "Niet geraden"])
-    return render_template("Games/Wordle/wordle_end_N_geraden.html", background_source="../" + background_source, woord=woord)
+    return render_template("Games/End.html",game="Wordle", beschrijving="Spijtig u de wordle "+ woord + " niet op te lossen!", background_source=background_source, href="/Wordle")
