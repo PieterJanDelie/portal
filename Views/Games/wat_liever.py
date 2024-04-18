@@ -22,7 +22,8 @@ def updateJsonData(data, chosen_option):
 @watLiever_view.route("/")
 def watLiever_home():
     session['watLieverQuestions'] = getLieverVragen()
-    return render_template("Games/WatLiever/watliever.html", background_source=getRandomImage("Games/WatLiever/Startscherm", InParentFolder=False))
+    background_source=getRandomImage("Games/WatLiever/Startscherm", InParentFolder=False)
+    return render_template("Games/BeginScherm.html", background_source=background_source, game="Wat heb je liever?", href="WatLiever/Play")
 
 @watLiever_view.route("/Start", methods=['GET', 'POST'])
 def start_watLiever():

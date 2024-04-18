@@ -7,7 +7,8 @@ memory_view = Blueprint('memory', __name__, template_folder='templates')
 
 @memory_view.route("/")
 def memory_home():
-    return render_template("Games/Memory/memory.html", background_source=getRandomImage("Games/Memory/Startscherm", InParentFolder=False))
+    background_source=getRandomImage("Games/Memory/Startscherm", InParentFolder=False)
+    return render_template("Games/BeginScherm.html", background_source=background_source, game="Memory", href="Memory/Play")
 
 @memory_view.route("/Play")
 def memory_game():

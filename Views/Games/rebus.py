@@ -10,7 +10,7 @@ rebus_view = Blueprint('rebus', __name__, template_folder='templates')
 def rebus_home():
     session["woord"]=""
     background_source=getRandomImage("spelers", InParentFolder=False)
-    return render_template("Games/Rebus/rebus.html", background_source=background_source)
+    return render_template("Games/BeginScherm.html", background_source=background_source, game="Rebus", href="Rebus/Play")
 
 
 @rebus_view.route("/Play")

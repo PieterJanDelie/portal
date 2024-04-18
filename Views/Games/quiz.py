@@ -11,7 +11,8 @@ def quiz_home():
     session['questions_answered'] = 0
     session['correct_answers'] = 0
     session['asked_questions'] = []
-    return render_template("Games/Quiz/quiz.html", background_source=getRandomImage("Games/Quiz/Startscherm", InParentFolder=False))
+    background_source=getRandomImage("Games/Quiz/Startscherm", InParentFolder=False)
+    return render_template("Games/BeginScherm.html", background_source=background_source, game="Quiz", href="Quiz/Play")
 
 @quiz_view.route("/StartQuiz", methods=['GET', 'POST'])
 def start_quiz():

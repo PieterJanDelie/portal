@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wordle</title>
-    <link rel="stylesheet" href="../../static/Style/Games/Wordle/home.css">
+    <title>{{game}}</title>
+    <link rel="stylesheet" href="../../static/Style/Games/beginscherm.css">
     <link rel="stylesheet" href="../../static/Style/default.css">
   </head>
   <body>
@@ -19,8 +19,10 @@
           alt="BCO Filou logo"
           class="logo"
         />
-        <h1 class="beginText">Begin de BCO-Wordle</h1>
-        <a href="/Wordle/Play"><button class="start-button">Start</button></a>
+        <h1 class="beginText">Speel de BCO-{{game}}</h1>
+        <a href={{href}}
+          ><button class="start-button">Start</button></a
+        >
       </div>
       <div class="provided-text">provided by</div>
       <img
