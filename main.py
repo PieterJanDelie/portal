@@ -24,11 +24,14 @@ app.secret_key = os.getenv('SECRET_KEY')
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), "Photos/Logo/BCO-Filou-logo-voor-witte-achtergrond.ico")
+
 app.add_url_rule("/", view_func=home)
 app.add_url_rule("/Kalender", view_func=kalender)
 app.add_url_rule("/Stand", view_func=stand)
 app.add_url_rule("/Uitslagen", view_func=uitslagen)
 app.add_url_rule("/Team", view_func=team)
+
+#GameLinks
 app.add_url_rule("/GameCenter", view_func=GameCenter_Home)
 app.add_url_rule("/Quiz", view_func=quiz_home)
 app.add_url_rule("/Quiz/StartQuiz", view_func=start_quiz, methods=['GET', 'POST'])

@@ -136,7 +136,7 @@
       <div class="popup-message">Wil je op deze pagina blijven?</div>
       <div class="popup-buttons">
         <button onclick="resetTimer()">Ja</button>
-        <button onclick="navigateToQuiz()">Nee</button>
+        <button onclick="navigateToGameCenter()">Nee</button>
       </div>
     </div>
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
@@ -170,8 +170,8 @@
     <script>
       var timer;
 
-      function navigateToQuiz() {
-        window.location.href = "/Quiz";
+      function navigateToGameCenter() {
+        window.location.href = "/GameCenter";
       }
 
       function resetTimer() {
@@ -187,7 +187,7 @@
         var popup = document.getElementById("alert-box");
         popup.style.display = "block";
 
-        timer = setTimeout(navigateToQuiz, 7500);
+        timer = setTimeout(navigateToGameCenter, 7500);
       }
 
       window.onload = function () {
