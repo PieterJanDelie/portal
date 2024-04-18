@@ -2,7 +2,9 @@
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Eind</title>
+    <script src="../../static/Scripts/Games/NavigateBack.js"></script>
     <style>
       body {
         margin: 0;
@@ -167,32 +169,5 @@
       alt="Allsee logo"
       class="AllseeLogo"
     />
-    <script>
-      var timer;
-
-      function navigateToGameCenter() {
-        window.location.href = "/GameCenter";
-      }
-
-      function resetTimer() {
-        var popup = document.getElementById("alert-box");
-        popup.style.display = "none";
-
-        clearTimeout(timer);
-
-        timer = setTimeout(startAlertTimer, 20000);
-      }
-
-      function startAlertTimer() {
-        var popup = document.getElementById("alert-box");
-        popup.style.display = "block";
-
-        timer = setTimeout(navigateToGameCenter, 7500);
-      }
-
-      window.onload = function () {
-        resetTimer();
-      };
-    </script>
   </body>
 </html>
