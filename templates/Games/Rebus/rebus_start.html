@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BCO-WORDLE!</title>
+    <script src="../../static/Scripts/Games/Wordle/script.js"></script>
     <style>
       * {
         margin: 0;
@@ -211,32 +212,5 @@
         </div>
       </div>
     </div>
-    <script>
-      let word = document.getElementById("wordValue").value;
-      word = word.trim().toLowerCase();
-      console.log(word);
-      const keyboardButtons = document.querySelectorAll("button");
-      keyboardButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const letter = button.dataset.key;
-          const currentText = document.getElementById("woordgok").textContent;
-
-          var newText = currentText;
-          if (letter === "enter") {
-            if (currentText === word) {
-              window.location.href = "/Rebus/Einde/Geraden";
-            } else {
-              window.location.href = "/Rebus/Einde/NGeraden";
-            }
-          } else if (letter === "del") {
-            newText = currentText.slice(0, -1);
-          } else {
-            newText += letter;
-          }
-
-          document.getElementById("woordgok").textContent = newText;
-        });
-      });
-    </script>
   </body>
 </html>
