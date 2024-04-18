@@ -19,11 +19,11 @@ body {
   text-align: center;
 }
 .correct {
-  color: #037b07 !important;
+  color: #037b07;
   margin-top: 0;
 }
 .incorrect{
-  color: #f44336 !important;
+  color: #f44336;
 }
 h1 {
   margin: 0%, 7.2%;
