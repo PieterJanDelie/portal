@@ -89,13 +89,15 @@
 
       var isMouseDown = false;
 
-      $("body").on("mousedown", function () {
-        isMouseDown = true;
+      var isTouching = false;
+
+      $("body").on("touchstart", function (event) {
+        isTouching = true;
         startTime = performance.now();
       });
 
-      $("body").on("mouseup", function () {
-        isMouseDown = false;
+      $("body").on("touchend", function (event) {
+        isTouching = false;
         endTime = performance.now();
         var duration = (endTime - startTime) / 100;
         if (newBall.x == 100 && newBall.y == 650) {
@@ -108,12 +110,22 @@
         }
       });
 
-      $("body").on("mousemove", function () {
-        if (isMouseDown && theKeyIsDown === false) {
-          theKeyIsDown = true;
-        } else if (!isMouseDown && theKeyIsDown === true) {
-          theKeyIsDown = false;
-        }
+      $("body").on("touchmove", function (event) {
+        event.preventDefault(); // Prevent scrolling while touching
+        var touch =
+          event.originalEvent.touches[0] ||
+          event.originalEvent.changedTouches[0];
+        var mouseX = touch.pageX;
+        var mouseY = touch.pageY;
+
+        // Convert touch coordinates to canvas coordinates
+        var rect = canvas.getBoundingClientRect();
+        mouseX -= rect.left;
+        mouseY -= rect.top;
+
+        // Update angle position based on touch coordinates
+        newAngle.x = mouseX;
+        newAngle.y = mouseY;
       });
 
       var flameImage = new Image();
