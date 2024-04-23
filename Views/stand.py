@@ -13,6 +13,7 @@ def stand():
         soup = BeautifulSoup(response.content, 'html.parser')
 
         stand_content = soup.find("div", class_="bigslam-single-article")
+        print(stand_content)
 
         if stand_content:
             return render_template("Stand/stand.html", stand_content=stand_content)
