@@ -12,6 +12,7 @@ from Views.Games.quess_Transfer import start_questransfer, questransfer_home
 from Views.Games.rebus import rebus_home, rebus_game, rebus_end_geraden, rebus_end_N_geraden
 from Views.Games.wat_liever import watLiever_home, start_watLiever
 from Views.Games.gamecenter import GameCenter_Home
+from Views.Games.shotgame import shotgame_home, shotgame_game, shotgame_end
 
 from dotenv import load_dotenv
 import os
@@ -51,6 +52,9 @@ app.add_url_rule("/Rebus/Einde/Geraden", view_func=rebus_end_geraden)
 app.add_url_rule("/Rebus/Einde/NGeraden", view_func=rebus_end_N_geraden)
 app.add_url_rule("/WatLiever", view_func=watLiever_home)
 app.add_url_rule("/WatLiever/Play", view_func=start_watLiever, methods=['GET', 'POST'])
+app.add_url_rule("/Shotgame", view_func=shotgame_home)
+app.add_url_rule("/Shotgame/Play", view_func=shotgame_game)
+app.add_url_rule("/Shotgame/Einde", view_func=shotgame_end)
 
 
 

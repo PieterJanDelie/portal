@@ -1,0 +1,45 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.btn-area {
+  text-align: center;
+}
+.start-btn[type="submit"] {
+  background-color: hsla(40, 80%, 50%, 1);
+  border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid black;
+  color: black;
+  padding: 11px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#canvasDiv {
+  position: relative;
+}
+
+#ballArea {
+  z-index: 2;
+  position: absolute;
+}
+
+#backCanvas {
+  z-index: 1;
+  position: absolute;
+}
+#canvasDiv,
+#ballArea,
+#backCanvas {
+  width: 100%;
+  height: 100%;
+}
+.title {
+	color: white;
+	padding-left: 10px;
+}

@@ -7,12 +7,6 @@
       "laatste_tekstje": "Sam van Rossom is onze kleinste speler met een lengte van 188cm, Xander Pintelon en Haris Bratanovic zijn onze big boys met elk 208cm."
     },
     {
-      "vraag": "Hoeveel punten scoorde BCO al dit seizoen in alle competities?",
-      "mogelijke_antwoorden": ["2531 punten","2654 punten", "2726 punten", "2831 punten"],
-      "juist_antwoord": "2831 punten",
-      "laatste_tekstje": "In totaal scoorden we al 2831 punten of 76 per match."
-    },
-    {
       "vraag": "Wie heeft de meeste assists dit seizoen in de BNXT?",
       "mogelijke_antwoorden": ["Sam Van Rossom","Jean Salumu", "Damien Jefferson", "Khalil Ahmad"],
       "juist_antwoord": "Sam Van Rossom",
@@ -173,12 +167,6 @@
       "mogelijke_antwoorden": ["Sinds juli 2020","Sinds maart 2022", "Sinds mei 2016", "Sinds september 2019"],
       "juist_antwoord": "Sinds maart 2022",
       "laatste_tekstje": "Voor maart 2022 noemde de arena de Versluys Dome."
-    },
-    {
-      "vraag": "Wat was geen krantenkop van de vorige match",
-      "mogelijke_antwoorden": ["Oostende komt nooit in de problemen tegen Zwolle: 99-78", "Supportersdag van de Bredenaars bij Filou Oostende", "Zwolle gaat teleurgesteld naar huis na verlies tegen Oostende", "Oostende wint opnieuw en blijft ongeslagen leider"],
-      "juist_antwoord": "Zwolle gaat teleurgesteld naar huis na verlies tegen Oostende",
-      "laatste_tekstje": "De andere artikels kwamen van Sporza, HLN en de Krant van West-Vlaanderen."
     }
   ]
 }
