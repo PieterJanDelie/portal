@@ -24,9 +24,9 @@ def memory_end():
     time = request.args.get('time', type=int)
     write_to_csv("Memory/Eindscores.csv", [datetime.now(), moves, time])
     background_source=getRandomImage("Games/Memory/Eindscherm")
-    tekst= "In totaal had je "+ str(moves) + " combinaties nodig.\n Dat deed je in "
-    min = str(time // 60)
+    tekst= "In totaal had je "+ str(moves) + " combinaties nodig. Dat deed je in "
+    min = time // 60
     if min > 0:
-        tekst += min + " minuten en " 
+        tekst += str(min) + " minuten en " 
     tekst += str(time % 60) + " seconden nodig."
-    return render_template("Games/End.html",game="Memory", beschrijving=tekst, background_source=background_source, href="/Memory")
+    return render_template("Games/End.html", game="Memory", beschrijving=tekst, background_source=background_source, href="/Memory")

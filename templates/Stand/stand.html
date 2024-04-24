@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Stand</title>
-</head>
-<body>
+    <link rel="stylesheet" href="../../static/Style/default.css" />
+    <link rel="stylesheet" href="../../static/Style/Portal/default.css" />
+    <link rel="stylesheet" href="../../static/Style/Stand/start.css" />
+  </head>
+  <body>
+    <img src="{{background_source}}" alt="background" class="backgroundimage" />
+    <div class="orangefilter"></div>
     <div class="container">
-        <div class="navigation">
-            <a href="/"><img src="static/Photos/house.png" alt="Back to Home" width="30"></a>
-        </div>
-        <h1>Stand</h1>
-        {{ stand_content | safe }}
+        <a href="/"  class="BackHome"
+          ><img src="static/Photos/house.png" alt="Back to Home" width="30"
+        /></a>
+      <h1>Stand</h1>
+      {{ stand_content | safe }}
     </div>
-</body>
+  </body>
 </html>

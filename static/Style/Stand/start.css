@@ -1,0 +1,90 @@
+body {
+  align-items: start !important;
+  margin: 5%;
+}
+
+article.bigslam-single-article {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: var(--bg-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+section.bigslam-single-article-content {
+  border: none;
+  padding: 8px;
+}
+
+.sp-table-caption {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.sp-table-wrapper {
+  overflow-x: auto;
+}
+
+table.sp-league-table {
+  width: 100%;
+}
+
+table.sp-league-table th,
+table.sp-league-table td {
+  border: none;
+  padding: 8px;
+}
+
+table.sp-league-table thead {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+table.sp-league-table tr {
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+table.sp-league-table tr:nth-child(even) {
+  background-color: #cccaca;
+}
+
+.sp-highlight {
+  background-color: var(--highlight-color);
+}
+
+.team-logo img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  padding-bottom: 5%;
+}
+table {
+  border-collapse: collapse;
+}
+tr {
+  border: solid;
+  border-width: 1px 0;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  table.sp-league-table th,
+  table.sp-league-table td {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .sp-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

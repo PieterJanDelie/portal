@@ -1,0 +1,33 @@
+h1 {
+  margin-top: 0;
+}
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 20px;
+}
+input[type="submit"] {
+  background-color: #ffd500;
+  border: none;
+  color: #333;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  font: bold;
+}
+input[type="submit"]:hover {
+  background-color: #e5c100;
+}

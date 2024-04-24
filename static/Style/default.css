@@ -1,3 +1,16 @@
+:root {
+  --primary-color: #dd8e07;
+  --secondary-color: #ffd500;
+  --text-color: #333;
+  --text-color-light: white;
+  --highlight-color: #ffd500;
+  --light-color: white;
+  --semi-light-color: #fff5e7;
+  --dark-color: black;
+  --bg-color: #fff;
+  --correct-color: #037b07;
+  --incorrect-color: #f44336;
+}
 .AllseeLogo {
   position: absolute;
   bottom: 2%;
@@ -17,7 +30,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 .BackHome {
   position: absolute;
