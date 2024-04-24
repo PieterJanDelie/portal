@@ -26,14 +26,14 @@ def rebus_game():
 
 @rebus_view.route("/Einde/Geraden")
 def rebus_end_geraden():
-    background_source=getRandomImage("Games/Rebus/Eindscherm/Goed")
+    background_source="../"+getRandomImage("Games/Rebus/Eindscherm/Goed")
     woord = session["woord"]
     write_to_csv("Rebus/Eindscores.csv", [datetime.now(), woord, "Geraden"])
     return render_template("Games/End.html",game="Rebus", beschrijving="Proficiat u wist de rebus "+ woord + " op te lossen!", background_source=background_source, href="/Rebus")
 
 @rebus_view.route("/Einde/NGeraden")
 def rebus_end_N_geraden():
-    background_source=getRandomImage("Games/Rebus/Eindscherm/Slecht")
+    background_source="../"+getRandomImage("Games/Rebus/Eindscherm/Slecht")
     woord = session["woord"]
     write_to_csv("Rebus/Eindscores.csv", [datetime.now(), woord, "Niet geraden"])
     return render_template("Games/End.html",game="Rebus", beschrijving="Spijtig u de rebus "+ woord + " niet op te lossen!", background_source=background_source, href="/Rebus")

@@ -3,6 +3,11 @@ body {
   margin: 5%;
 }
 
+h4 {
+  font-size: 1em !important;
+  margin-top: 0px;
+}
+
 article.bigslam-single-article {
   font-family: Arial, sans-serif;
   border-collapse: collapse;
@@ -64,7 +69,6 @@ table.sp-league-table tr:nth-child(even) {
 .container {
   max-width: 80%;
   margin: 0 auto;
-  overflow-y: scroll;
   padding-bottom: 5%;
 }
 table {

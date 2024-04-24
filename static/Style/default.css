@@ -11,6 +11,18 @@
   --correct-color: #037b07;
   --incorrect-color: #f44336;
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: xx-large;
+}
+
 .AllseeLogo {
   position: absolute;
   bottom: 2%;
@@ -21,7 +33,6 @@
   position: absolute;
   bottom: 2%;
   right: calc(10px + 10%);
-  font-size: 120%;
 }
 .backgroundimage {
   position: fixed;
@@ -39,4 +50,23 @@
 }
 .BackHome img {
   width: 50px;
+}
+
+button {
+  border: none;
+  color: var(--text-color-light);
+  padding: 15px 30px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  background-color: var(--primary-color);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
 }
