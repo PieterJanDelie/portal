@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uitslagen</title>    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uitslagen</title>
     <link rel="stylesheet" href="../../static/Style/default.css" />
     <link rel="stylesheet" href="../../static/Style/Portal/default.css" />
-    <link rel="stylesheet" href="../../static/Style/Kalender/uitslagen.css" />
-</head>
-<body>
+    <link rel="stylesheet" href="../../static/Style/Uitslagen/uitslagen.css" />
+  </head>
+  <body>
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
     <div class="orangefilter"></div>
     <div class="container">
-      <a href="/"  class="BackHome"
+      <a href="/" class="BackHome"
         ><img src="static/Photos/house.png" alt="Back to Home" width="30"
       /></a>
       <h1>Uitslagen</h1>
-        {{ event_list|safe }}
+      {{ event_list|safe }}
     </div>
-</body>
+  </body>
 </html>

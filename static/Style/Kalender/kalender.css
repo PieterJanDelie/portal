@@ -1,19 +1,17 @@
-body{
+body {
   align-items: start !important;
   margin: 5%;
 }
 .container {
-  font-family: Arial, sans-serif;
   border-collapse: collapse;
   max-width: 90%;
   margin-top: 20px;
-  border-radius: 15px;
-  background-color: var(--bg-color);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  padding-bottom: 40px;
+  font-size: large;
 }
 
 h1 {
-  text-align: center;
+  font-size: 3em;
 }
 
 .sp-table-wrapper {
@@ -42,7 +40,7 @@ h1 {
   background-color: #cccaca;
 }
 
-.sp-event-list tr{
+.sp-event-list tr {
   border-top: 2px solid black;
 }
 

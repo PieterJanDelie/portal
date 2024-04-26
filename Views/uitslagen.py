@@ -13,7 +13,7 @@ def uitslagen():
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        event_list = soup.find("div", class_="sp-template sp-template-event-list")
+        event_list = soup.find("div", class_="sp-table-wrapper")
 
         if event_list:
             for a_tag in event_list.find_all("a"):

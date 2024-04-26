@@ -1,51 +1,45 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+  align-items: start !important;
+  margin: 5%;
 }
 .container {
-    max-width: 80% !important ;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-size: medium;
+  max-width: 90%;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  font-size: large;
 }
-.navigation {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.navigation a {
-    text-decoration: none;
+h1 {
+  font-size: 3em;
 }
 .sp-table-caption {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
 }
 .sp-table-wrapper {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 .sp-event-list {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid black;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
 }
 .sp-event-list th,
 .sp-event-list td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 .sp-event-list th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
 .sp-event-list tr:nth-child(even) {
-    background-color: #f9f9f9;
+  background-color: #cccaca;
 }
 .sp-event-list tr {
-    border-top: 2px solid black;
+  border-top: 2px solid black;
+}
+.sp-event-list th {
+  background-color: var(--primary-color);
 }
