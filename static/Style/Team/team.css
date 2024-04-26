@@ -1,16 +1,21 @@
-.gdlr-core-column-container {
-  display: flex;
-  flex-wrap: wrap;
+body {
+  align-items: start !important;
+  margin: 5%;
+}
+.container {
+  max-width: 90%;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  font-size: large;
 }
 
-.gdlr-core-column-15 {
-  width: calc(20% - 20px);
-  margin-right: 20px;
-  margin-bottom: 20px;
+.gdlr-core-pbf-column.gdlr-core-column-15 {
+  width: 25%;
+  float: left;
   box-sizing: border-box;
+  padding: 0 15px;
 }
-@media screen and (max-width: 768px) {
-  .gdlr-core-column-15 {
-    width: calc(50% - 20px);
-  }
+
+.gdlr-core-pbf-column.gdlr-core-column-15:nth-child(5n+1) {
+  clear: left;
 }

@@ -18,6 +18,12 @@ h4 {
   padding-bottom: 40px;
   font-size: large;
 }
+.wp-post-image{
+  width: auto;
+  height: auto;
+  max-width: 25px;
+  max-height: 25px;
+}
 
 section.bigslam-single-article-content {
   border: none;
