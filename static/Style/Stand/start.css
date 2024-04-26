@@ -15,7 +15,7 @@ article.bigslam-single-article {
   margin-top: 20px;
   border-radius: 15px;
   background-color: var(--bg-color);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 section.bigslam-single-article-content {

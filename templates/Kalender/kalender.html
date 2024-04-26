@@ -4,15 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kalender</title>
+    <link rel="stylesheet" href="../../static/Style/default.css" />
     <link rel="stylesheet" href="../../static/Style/Portal/default.css" />
+    <link rel="stylesheet" href="../../static/Style/Kalender/kalender.css" />
   </head>
   <body>
+    <img src="{{background_source}}" alt="background" class="backgroundimage" />
+    <div class="orangefilter"></div>
     <div class="container">
-      <div class="navigation">
-        <a href="/"
-          ><img src="static/Photos/house.png" alt="Back to Home" width="30"
-        /></a>
-      </div>
+      <a href="/"  class="BackHome"
+        ><img src="static/Photos/house.png" alt="Back to Home" width="30"
+      /></a>
       <h1>Kalender</h1>
       {{ kalender_content | safe }}
     </div>
