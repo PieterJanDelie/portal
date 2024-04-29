@@ -3,26 +3,26 @@
         {
             "optie1": "Shotten als Gillet",
             "optie2": "Driven als Khalil Ahmad",
-            "numOptie1": 7,
+            "numOptie1": 8,
             "numOptie2": 3
         },
         {
             "optie1": "Dansen als de cheerleaders",
             "optie2": "De looks van Filou",
             "numOptie1": 6,
-            "numOptie2": 6
+            "numOptie2": 7
         },
         {
             "optie1": "BCO altijd kampioen",
             "optie2": "KVO 1 keer kampioen",
-            "numOptie1": 8,
+            "numOptie1": 9,
             "numOptie2": 8
         },
         {
             "optie1": "Match op vrijdag",
             "optie2": "Match op zaterdag",
             "numOptie1": 7,
-            "numOptie2": 3
+            "numOptie2": 4
         }
     ]
 }
