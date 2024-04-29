@@ -18,7 +18,7 @@ body {
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
   row-gap: 15px;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
 }
 
 .cards-container {
@@ -34,7 +34,7 @@ body {
 }
 
 .gfg-heading {
-  color: #dd8e07;
+  color: var(--primary-color);
   font-size: xx-large;
 }
 
@@ -73,7 +73,7 @@ body {
 .move-counter {
   padding: 10px 20px;
   border-radius: 25px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--light-color);
 }
 
 .toggled .card-image {

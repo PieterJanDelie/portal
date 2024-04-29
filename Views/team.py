@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from flask import Blueprint, render_template
+from services.algemeneFuncties import getRandomImage
 
 team_view = Blueprint('team', __name__, template_folder='templates')
 
@@ -12,17 +13,18 @@ def team():
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        title_wrap = soup.find("div", class_="bigslam-page-title-wrap bigslam-style-custom bigslam-center-align")
-        page_wrapper = soup.find("div", class_="bigslam-page-wrapper")
+        title_wrap = soup.find("div", class_="bigslam-page-wrapper")
 
-        if title_wrap and page_wrapper:
-            for a_tag in page_wrapper.find_all('a'):
+        if title_wrap:
+            for a_tag in title_wrap.find_all('a'):
                 a_tag.unwrap()
+            
+            for title in title_wrap.find_all('h3'):
+                title.extract()
 
-            title_wrap_style = title_wrap.get("style")
 
-            return render_template("Team/team.html", title_wrap=title_wrap, page_wrapper=page_wrapper,
-                                   title_wrap_style=title_wrap_style)
+            background_source = background_source=getRandomImage("Sfeer")
+            return render_template("Team/team.html", title_wrap=title_wrap, background_source = background_source)
         else:
             return "We zijn het team nog aan het samen steken.", 500
     else:

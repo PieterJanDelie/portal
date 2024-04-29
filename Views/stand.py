@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from flask import Blueprint, render_template
+from services.algemeneFuncties import getRandomImage
 
 stand_view = Blueprint('stand', __name__, template_folder='templates')
 
@@ -15,7 +16,8 @@ def stand():
         stand_content = soup.find("div", class_="bigslam-single-article")
 
         if stand_content:
-            return render_template("Stand/stand.html", stand_content=stand_content)
+            background_source = background_source=getRandomImage("Sfeer")
+            return render_template("Stand/stand.html", stand_content=stand_content, background_source = background_source)
         else:
             return "De vereiste div kon niet worden gevonden op de website.", 500
     else:

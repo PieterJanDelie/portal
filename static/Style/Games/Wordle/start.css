@@ -41,11 +41,11 @@ body {
 }
 
 header {
-  border-bottom: 1px solid rgb(58, 58, 60);
+  border-bottom: 1px solid var(--text-color);
 }
 
 .title {
-  color: #dd8e07;
+  color: var(--primary-color);
   font-size: 2.5rem;
   font-weight: bold;
   margin: 0.4rem 0 0.4rem 0;
@@ -71,12 +71,12 @@ header {
 }
 
 .square {
-  border: 2px solid rgb(58, 58, 60);
+  border: 2px solid var(--semi-light-color);
   min-width: 40px;
   min-height: 40px;
   font-size: 33px;
   font-weight: bold;
-  color: black;
+  color: var(--text-color);
   text-transform: uppercase;
 
   display: flex;
@@ -103,8 +103,8 @@ header {
   padding: 0;
   height: 58px;
   cursor: pointer;
-  background-color: rgb(129, 131, 132);
-  color: rgb(0, 0, 0);
+  background-color: var(--semi-light-color);
+  color: var(--text-color);
   flex-grow: 1;
   text-transform: uppercase;
   margin-right: 6px;

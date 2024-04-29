@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #dd8e07;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ body {
 .container {
   position: relative;
   min-width: 50%;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
   padding: 20px;
@@ -25,8 +25,8 @@ form {
   margin-top: 20px;
 }
 input[type="submit"] {
-  background-color: #dd8e07;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
   border: none;
   text-align: center;
   text-decoration: none;
@@ -41,16 +41,16 @@ input[type="submit"] {
   height: 400px;
 }
 input[type="submit"]:hover {
-  background-color: #ffd500 !important;
-  color: #333 !important;
+  background-color: var(--secondary-color) !important;
+  color: var(--text-color) !important;
 }
 .eersteOptie {
-  background-color: #dd8e07 !important;
-  color: #333 !important;
+  background-color: var(--primary-color) !important;
+  color: var(--text-color) !important;
 }
 .tweedeOptie {
-  background-color: #333 !important;
-  color: #dd8e07 !important;
+  background-color: var(--text-color) !important;
+  color: var(--primary-color) !important;
 }
 .answerstyle {
   transform: scale(2);

@@ -1,0 +1,21 @@
+body {
+  align-items: start !important;
+  margin: 5%;
+}
+.container {
+  max-width: 90%;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  font-size: large;
+}
+
+.gdlr-core-pbf-column.gdlr-core-column-15 {
+  width: 25%;
+  float: left;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.gdlr-core-pbf-column.gdlr-core-column-15:nth-child(5n+1) {
+  clear: left;
+}

@@ -31,8 +31,8 @@ body {
   }
   
   .start-button {
-    background-color: #dd8e07;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     font-size: 24px;
     padding: 20px 40px;
     border: none;
@@ -44,8 +44,8 @@ body {
   }
   
   .start-button:hover {
-    background-color: #ffd500;
-    color: #333;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     transition: background-color 0.3s ease;
   }
   .beginText {

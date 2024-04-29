@@ -1,0 +1,98 @@
+body {
+  align-items: start !important;
+  margin: 5%;
+}
+
+h1 {
+  font-size: 3em;
+}
+h4 {
+  font-size: 2em !important;
+  margin-top: 0px;
+}
+
+.container {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  font-size: large;
+}
+.wp-post-image{
+  width: auto;
+  height: auto;
+  max-width: 25px;
+  max-height: 25px;
+}
+
+section.bigslam-single-article-content {
+  border: none;
+  padding: 8px;
+}
+
+.sp-table-caption {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.sp-table-wrapper {
+  overflow-x: auto;
+}
+
+table.sp-league-table {
+  width: 100%;
+}
+
+table.sp-league-table th,
+table.sp-league-table td {
+  border: none;
+  padding: 8px;
+}
+
+table.sp-league-table thead {
+  background-color: var(--primary-color);
+}
+
+table.sp-league-table tr {
+  border: 2px solid black;
+}
+
+table.sp-league-table tr:nth-child(even) {
+  background-color: #cccaca;
+}
+
+.sp-highlight {
+  background-color: var(--highlight-color);
+}
+
+.team-logo img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+table {
+  border-collapse: collapse;
+}
+tr {
+  border: solid;
+  border-width: 1px 0;
+}
+
+@media screen and (max-width: 768px) {
+  table.sp-league-table th,
+  table.sp-league-table td {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .sp-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
