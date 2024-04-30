@@ -6,12 +6,13 @@ html {
   padding: 0;
   overflow: hidden;
 }
+
 .btn-area {
   text-align: center;
 }
+
 .start-btn[type="submit"] {
   background-color: hsla(40, 80%, 50%, 1);
-  border-radius: 28px;
   border-radius: 28px;
   border: 1px solid black;
   color: black;
@@ -25,23 +26,28 @@ html {
 }
 
 #ballArea {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
+  pointer-events: none;
 }
 
 #backCanvas {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
+  pointer-events: none;
 }
+
 #canvasDiv,
 #ballArea,
 #backCanvas {
   width: 100%;
-  height: 100%;
+  height: 95%;
+  margin-top: 5%;
 }
+
 .title {
-	color: white;
-	padding-left: 10px;
+  color: white;
+  padding-left: 10px;
 }
 * {
   user-select: none;
