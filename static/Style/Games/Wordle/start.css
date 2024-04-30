@@ -13,20 +13,26 @@ body {
 #container {
   display: flex;
   height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
+h1{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 #game {
-  width: 50%;
+  max-width: 80%;
   max-height: 95%;
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 75px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
@@ -86,6 +92,7 @@ header {
 
 #keyboard-container {
   height: 200px;
+  padding-bottom: 50px;
 }
 
 .keyboard-row {

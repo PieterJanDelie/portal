@@ -5,20 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BCO-WORDLE!</title>
-    <link rel="stylesheet" href="../../static/Style/Games/Wordle/start.css">
-    <link rel="stylesheet" href="../../static/Style/default.css">
+    <link rel="stylesheet" href="../../static/Style/default.css" />
+    <link rel="stylesheet" href="../../static/Style/Games/Wordle/start.css" />
     <script src="../../static/Scripts/Games/Wordle/script.js" defer></script>
   </head>
   <body>
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
-    <div id="container">
+    <div id="container" class="container">
       <div id="game">
-        <header>
-          <h1 class="title">BCO-WORDLE</h1>
-          <a href="/Wordle" class="BackHome"
-            ><img src="../../static/Photos/arrowBack.png" alt="Back to home"
-          /></a>
-        </header>
+        <h1 class="title">BCO-WORDLE</h1>
+        <a href="/Wordle" class="BackHome"
+          ><img src="../../static/Photos/arrowBack.png" alt="Back to home"
+        /></a>
         <input type="hidden" id="wordValue" value="{{ woord }}" />
         <div id="board-container">
           <div id="board"></div>
