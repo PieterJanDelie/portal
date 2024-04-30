@@ -12,12 +12,10 @@
   </head>
   <body id="gameBody">
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
-    <a href="/Shotgame" class="BackHome"
-      ><img src="../../static/Photos/arrowBack.png" alt="Back to home"
-    /></a>
+    <h1>#UNSEEN13</h1>
     <div id="canvasDiv">
-      <canvas id="ballArea" width="1200px" height="750px"></canvas>
-      <canvas id="backCanvas" width="1200px" height="750px"></canvas>
+      <canvas id="ballArea" width="1600px" height="1000px"></canvas>
+      <canvas id="backCanvas" width="1600px" height="1000px"></canvas>
     </div>
     <script>
       "use strict";
@@ -86,33 +84,49 @@
         561: [21, -24],
       };
 
-      var touchStartTime;
-      var touchEndTime;
+      var startTime;
+      var endTime;
+
+      var isMouseDown = false;
 
       var isTouching = false;
 
-      $("#canvasDiv").on("touchstart", function (event) {
+      $("body").on("touchstart", function (event) {
         isTouching = true;
-        touchStartTime = performance.now();
-        event.preventDefault();
+        startTime = performance.now();
       });
 
-      $("#canvasDiv").on("touchend", function (event) {
-        if (isTouching) {
-          isTouching = false;
-          touchEndTime = performance.now();
-          var touchDuration = (touchEndTime - touchStartTime) / 100;
-          if (newBall.x == 100 && newBall.y == 650) {
-            newBall.shot(
-              touchDuration + angleVelocity[newAngle.y][0],
-              angleVelocity[newAngle.y][1]
-            );
-          }
-          event.preventDefault();
+      $("body").on("touchend", function (event) {
+        isTouching = false;
+        endTime = performance.now();
+        var duration = (endTime - startTime) / 100;
+        if (newBall.x == 100 && newBall.y == 650) {
+          console.log(duration);
+          console.log(newAngle.y);
+          newBall.shot(
+            duration + angleVelocity[newAngle.y][0],
+            angleVelocity[newAngle.y][1]
+          );
         }
       });
 
-      
+      $("body").on("touchmove", function (event) {
+        event.preventDefault(); // Prevent scrolling while touching
+        var touch =
+          event.originalEvent.touches[0] ||
+          event.originalEvent.changedTouches[0];
+        var mouseX = touch.pageX;
+        var mouseY = touch.pageY;
+
+        // Convert touch coordinates to canvas coordinates
+        var rect = canvas.getBoundingClientRect();
+        mouseX -= rect.left;
+        mouseY -= rect.top;
+
+        // Update angle position based on touch coordinates
+        newAngle.x = mouseX;
+        newAngle.y = mouseY;
+      });
 
       var flameImage = new Image();
       flameImage.src = "./images/fire.png";
