@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../static/Style/Portal/default.css" />
     <link rel="stylesheet" href="../../static/Style/default.css" />
     <link rel="stylesheet" href="../../static/Style/Feedback/feedback.css" />
+    <script src="../../static/Scripts/Feedback/script.js" defer></script>
   </head>
   <body>
     <div class="navigation">
@@ -18,15 +19,15 @@
     <div class="orangefilter"></div>
     <div class="container">
       <h1>Feedback</h1>
-      <form method="post">
+      <form method="post" id="feedbackform">
         <label for="aankoop">Verliep het aankoopproces vlot?</label>
         <input
           type="range"
           id="aankoop"
           name="aankoop"
           min="1"
-          max="5"
-          value="3"
+          max="100"
+          value="50"
           step="1"
         />
         <label for="randanimatie">Wat vond je van de randanimatie?</label>
@@ -35,8 +36,8 @@
           id="randanimatie"
           name="randanimatie"
           min="1"
-          max="5"
-          value="3"
+          max="100"
+          value="50"
           step="1"
         />
         <label for="suggesties">Suggesties</label>
@@ -46,8 +47,45 @@
           rows="4"
           cols="50"
         ></textarea>
-        <input type="submit" value="Submit" />
       </form>
+      <div id="keyboard-container">
+        <div class="keyboard-row">
+          <button id="a" data-key="a">a</button>
+          <button id="z" data-key="z">z</button>
+          <button id="e" data-key="e">e</button>
+          <button id="r" data-key="r">r</button>
+          <button id="t" data-key="t">t</button>
+          <button id="y" data-key="y">y</button>
+          <button id="u" data-key="u">u</button>
+          <button id="i" data-key="i">i</button>
+          <button id="o" data-key="o">o</button>
+          <button id="p" data-key="p">p</button>
+        </div>
+        <div class="keyboard-row">
+          <button id="q" data-key="q">q</button>
+          <button id="s" data-key="s">s</button>
+          <button id="d" data-key="d">d</button>
+          <button id="f" data-key="f">f</button>
+          <button id="g" data-key="g">g</button>
+          <button id="h" data-key="h">h</button>
+          <button id="j" data-key="j">j</button>
+          <button id="k" data-key="k">k</button>
+          <button id="l" data-key="l">l</button>
+          <button id="m" data-key="m">m</button>
+          <button id="-" data-key="-">-</button>
+          <button data-key="enter" class="wide-button">Enter</button>
+        </div>
+        <div class="keyboard-row">
+          <button id="w" data-key="w">w</button>
+          <button id="x" data-key="x">x</button>
+          <button id="c" data-key="c">c</button>
+          <button id="v" data-key="v">v</button>
+          <button data-key=" " class="wide-button">Spatie</button>
+          <button id="b" data-key="b">b</button>
+          <button id="n" data-key="n">n</button>
+          <button data-key="del" class="wide-button">Del</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

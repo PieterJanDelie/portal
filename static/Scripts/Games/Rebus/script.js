@@ -1,7 +1,6 @@
 
 let word = document.getElementById("wordValue").value;
 word = word.trim().toLowerCase();
-console.log(word);
 const keyboardButtons = document.querySelectorAll("button");
 keyboardButtons.forEach((button) => {
   button.addEventListener("click", () => {

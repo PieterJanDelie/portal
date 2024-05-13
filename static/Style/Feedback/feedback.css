@@ -26,25 +26,55 @@ input[type="range"] {
   border-radius: 15px;
   cursor: pointer;
   width: 100%;
-  background-color: var(--primary-color);
-  margin-bottom: 4%;
-}
-input[type="submit"] {
-  border: none;
-  color: var(--text-color-light);
-  padding: 15px 30px;
-  margin: 20px 15px;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 20px;
-  background-color: var(--primary-color);
-}
-input[type="submit"]:hover {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease;
+  accent-color: var(--primary-color);
+  margin-bottom: 1%;
 }
 #suggesties {
   width: 100%;
+  color: var(--primary-color);
+  background-color: var(--semi-light-color);
+  border: 2px var(--primary-color) solid;
+  border-radius: 10px;
+}
+#keyboard-container {
+  height: 200px;
+  padding-bottom: 10px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  touch-action: manipulation;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.keyboard-row button {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  height: 58px;
+  cursor: pointer;
+  background-color: var(--semi-light-color);
+  color: var(--primary-color);
+  border: 1px var(--primary-color) solid;
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-right: 6px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.keyboard-row button.wide-button {
+  flex-grow: 1.5;
+}
+
+.spacer-half {
+  flex-grow: 0.5;
+}
+
+form {
+  padding-bottom: 10px;
 }

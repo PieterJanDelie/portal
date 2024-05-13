@@ -15,7 +15,3 @@ body {
   box-sizing: border-box;
   padding: 0 15px;
 }
-
-.gdlr-core-pbf-column.gdlr-core-column-15:nth-child(5n+1) {
-  clear: left;
-}

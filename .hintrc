@@ -8,7 +8,8 @@
       {
         "ignore": [
           "user-select",
-          "-webkit-overflow-scrolling"
+          "-webkit-overflow-scrolling",
+          "accent-color"
         ]
       }
     ]
