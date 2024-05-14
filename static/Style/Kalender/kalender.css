@@ -8,6 +8,7 @@ body {
   margin-top: 20px;
   padding-bottom: 40px;
   font-size: large;
+  position: relative;
 }
 
 h1 {

@@ -7,6 +7,7 @@ body {
   margin-top: 20px;
   padding-bottom: 40px;
   font-size: large;
+  position: relative;
 }
 
 .gdlr-core-pbf-column.gdlr-core-column-15 {
@@ -14,4 +15,7 @@ body {
   float: left;
   box-sizing: border-box;
   padding: 0 15px;
+}
+.team {
+  font-size: 3em;
 }

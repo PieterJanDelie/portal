@@ -17,6 +17,7 @@ h4 {
   margin-top: 20px;
   padding-bottom: 40px;
   font-size: large;
+  position: relative;
 }
 .wp-post-image{
   width: auto;

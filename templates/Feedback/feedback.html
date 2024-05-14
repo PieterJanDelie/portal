@@ -4,20 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Feedback</title>
-    <link rel="stylesheet" href="../../static/Style/Portal/default.css" />
     <link rel="stylesheet" href="../../static/Style/default.css" />
+    <link rel="stylesheet" href="../../static/Style/Portal/default.css" />
     <link rel="stylesheet" href="../../static/Style/Feedback/feedback.css" />
     <script src="../../static/Scripts/Feedback/script.js" defer></script>
   </head>
   <body>
-    <div class="navigation">
-      <a href="/"
-        ><img src="static/Photos/house.png" alt="Back to Home" width="30"
-      /></a>
-    </div>
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
     <div class="orangefilter"></div>
     <div class="container">
+      <a href="/" class="BackHome"
+        ><img src="static/Photos/house.png" alt="Back to Home" width="30"
+      /></a>
       <h1>Feedback</h1>
       <form method="post" id="feedbackform">
         <label for="aankoop">Verliep het aankoopproces vlot?</label>
@@ -28,7 +26,7 @@
           min="1"
           max="100"
           value="50"
-          step="1"
+          step="0.01"
         />
         <label for="randanimatie">Wat vond je van de randanimatie?</label>
         <input
@@ -38,7 +36,7 @@
           min="1"
           max="100"
           value="50"
-          step="1"
+          step="0.01"
         />
         <label for="suggesties">Suggesties</label>
         <textarea
