@@ -10,7 +10,7 @@ wordle_view = Blueprint('wordle', __name__, template_folder='templates')
 def wordle_home():
     session["woord"]=""
     background_source=getRandomImage("Spelers", InParentFolder=False)
-    return render_template("Games/BeginScherm.html", background_source=background_source, game="Wordle", href="Wordle/Play")
+    return render_template("Games/BeginScherm.html", background_source=background_source, game="Lingo", href="Wordle/Play")
 
 
 @wordle_view.route("/Play")

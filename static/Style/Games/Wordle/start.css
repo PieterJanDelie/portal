@@ -77,7 +77,7 @@ header {
 }
 
 .square {
-  border: 2px solid var(--semi-light-color);
+  border: 2px solid var(--primary-color);
   min-width: 40px;
   min-height: 40px;
   font-size: 33px;
@@ -92,15 +92,16 @@ header {
 
 #keyboard-container {
   height: 200px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .keyboard-row {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 0 auto 8px;
   touch-action: manipulation;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .keyboard-row button {
@@ -111,12 +112,14 @@ header {
   height: 58px;
   cursor: pointer;
   background-color: var(--semi-light-color);
-  color: var(--text-color);
+  color: var(--primary-color);
+  border: 1px var(--primary-color) solid;
   flex-grow: 1;
   text-transform: uppercase;
   margin-right: 6px;
   border-radius: 4px;
   user-select: none;
+  padding: 10px;
 }
 
 .keyboard-row button.wide-button {
