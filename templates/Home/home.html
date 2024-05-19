@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../../static/Style/default.css" />
   </head>
   <body>
-    {% for sourceimg in imagesources %}
+    {% if imagesources %} {% for sourceimg in imagesources %}
     <link rel="preload" as="image" href="{{sourceimg}}" />
-    {% endfor %}
+    {% endfor %} {% endif %}
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
     <div class="orangefilter"></div>
     <div>
