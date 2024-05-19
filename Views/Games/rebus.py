@@ -36,4 +36,4 @@ def rebus_end_N_geraden():
     background_source="../"+getRandomImage("Games/Rebus/Eindscherm/Slecht")
     woord = session["woord"]
     write_to_csv("Rebus/Eindscores.csv", [datetime.now(), woord, "Niet geraden"])
-    return render_template("Games/End.html",game="Rebus", beschrijving="Spijtig u de rebus "+ woord + " niet op te lossen!", background_source=background_source, href="/Rebus")
+    return render_template("Games/End.html",game="Rebus", beschrijving="Spijtig u wist de rebus "+ woord + " niet op te lossen!", background_source=background_source, href="/Rebus")
