@@ -19,9 +19,6 @@
     <img src="{{background_source}}" alt="background" class="backgroundimage" />
     <div class="end-container">
       <div class="tile">
-        <a href="/GameCenter" class="BackHome"
-          ><img src="../../static/Photos/house.png" alt="Back to home"
-        /></a>
         <img
           src="../../static/Photos/Logo/BCO-Filou-logo-voor-witte-achtergrond.png"
           alt="BCO Filou logo"
@@ -30,11 +27,23 @@
         <h1 class="thank-you">Bedankt om te spelen!</h1>
         <h1 class="thank-you">Je bent nu officieel klaar voor UNSEEN 13</h1>
         <p class="score">{{beschrijving}}</p>
-        <a href={{href}}
-          ><button id="play-again-button" class="play-again-button">
-            Opnieuw spelen
-          </button></a
-        >
+        <nav>
+          <a href={{href}}
+            ><button id="play-again-button" class="play-again-button">
+              Opnieuw spelen
+            </button></a
+          >
+          <a href="/GameCenter"
+            ><button id="game-center-button" class="play-again-button">
+              Game-center
+            </button></a
+          >
+          <a href="/"
+            ><button id="home-button" class="play-again-button">
+              Home
+            </button></a
+          >
+        </nav>
       </div>
     </div>
     <div class="provided-text">provided by</div>

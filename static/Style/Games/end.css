@@ -62,20 +62,9 @@ body {
 }
 
 .play-again-button {
-  background-color: var(--primary-color);
-  color: var(--text-color-light);
-  padding: 20px 40px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: xx-large;
-}
-
-.play-again-button:hover {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease;
+  font-size: x-large;
+  border-radius: 20px;
+  margin-right: 5px;
 }
 
 .kickoff {
@@ -88,6 +77,6 @@ body {
   background-color: var(--primary-color);
   color: var(--text-color-light);
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   font-size: xx-large;
 }
