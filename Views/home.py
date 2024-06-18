@@ -5,6 +5,7 @@ home_view = Blueprint('home', __name__, template_folder='templates')
 
 @home_view.route("")
 def home():
+    session.clear() 
     print("load")
 
     first_visit = 'visited' not in session
