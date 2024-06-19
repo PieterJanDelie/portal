@@ -5,11 +5,11 @@ home_view = Blueprint('home', __name__, template_folder='templates')
 
 @home_view.route("")
 def home():
-    session.clear() 
     print("load")
 
     first_visit = 'visited' not in session
     if first_visit:
+        session.clear() 
         session['visited'] = True
 
     sources = get_image_paths() if first_visit else []
