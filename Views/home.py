@@ -9,7 +9,7 @@ def home():
 
     first_visit = 'visited' not in session
     if first_visit:
-        session.clear() 
+        
         session['visited'] = True
 
     sources = get_image_paths() if first_visit else []
