@@ -10,6 +10,4 @@ RUN pip install --upgrade pip
 
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
-
-CMD ["python", "main.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]  
